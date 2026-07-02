@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+
+# --- environments ---
+.venv/
+venv/
+env/
+.env
+
+# --- JAX / compilation caches ---
+jax_cache/
+.jax_cache/
+
+# --- results: commit SUMMARY.md + figures, ignore heavy regenerable artifacts ---
+# Standing rule: SUMMARY.md is the canonical record. Raw state/checkpoints are
+# large and recomputable, so they stay local.
+results/**/*.npy
+results/**/*.npz
+results/**/*.pkl
+results/**/*.pt
+results/**/*.h5
+results/**/*.hdf5
+results/**/checkpoints/
+results/**/*.log
+# (figures: *.png / *.pdf under results/ are tracked by default — remove this
+#  comment line and add a pattern here if you'd rather regenerate them.)
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- local working docs, not tracked ---
+HANDOFF_relay_program.md
