@@ -1,0 +1,218 @@
+{
+ "stage": "violation-recalibration-sweep",
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "K": 0.24,
+ "prereg": {
+  "width_rho": 4.5,
+  "r2_cutoff": 0.1,
+  "rule": "lowest swept center with stage-A r2 < cutoff on ALL seeds",
+  "collapse_bar": "max(0.5*compliant_e2e, 0.1) (unchanged)"
+ },
+ "geometry": {
+  "nyquist": 31.622776601683793,
+  "slow_tertile": [
+   1.0,
+   3.1332278919274597
+  ],
+  "guard": [
+   3.1332278919274597,
+   10.092715146305713
+  ],
+  "fast_tertile": [
+   10.092715146305713,
+   31.622776601683793
+  ],
+  "c_max": 14.161763857498668
+ },
+ "rows": [
+  {
+   "label": "compliant",
+   "band": [
+    0.2,
+    0.9
+   ],
+   "center": 0.42426406871192857,
+   "r2_per_seed": [
+    0.9814697252519144,
+    0.9877764190148102,
+    0.9900247290105952
+   ],
+   "r2_mean": 0.9864236244257732,
+   "r2_max": 0.9900247290105952,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "orig_violation",
+   "band": [
+    2.0,
+    9.0
+   ],
+   "center": 4.242640687119285,
+   "r2_per_seed": [
+    0.8250513351230497,
+    0.9036365718389542,
+    0.9240383060922357
+   ],
+   "r2_mean": 0.8842420710180798,
+   "r2_max": 0.9240383060922357,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "c=1.50",
+   "band": [
+    0.7071067811865476,
+    3.181980515339464
+   ],
+   "center": 1.5,
+   "r2_per_seed": [
+    0.8793909419549869,
+    0.9680775127600063,
+    0.9630055098714493
+   ],
+   "r2_mean": 0.9368246548621476,
+   "r2_max": 0.9680775127600063,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "c=2.07",
+   "band": [
+    0.9744833956205169,
+    4.385175280292326
+   ],
+   "center": 2.067191451590882,
+   "r2_per_seed": [
+    0.9251950650077455,
+    0.9375326916916613,
+    0.9562704063374305
+   ],
+   "r2_mean": 0.9396660543456123,
+   "r2_max": 0.9562704063374305,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "c=2.85",
+   "band": [
+    1.3429624967626588,
+    6.043331235431964
+   ],
+   "center": 2.8488536650202785,
+   "r2_per_seed": [
+    0.8323380702647256,
+    0.9397364876030228,
+    0.9499082731870631
+   ],
+   "r2_mean": 0.9073276103516038,
+   "r2_max": 0.9499082731870631,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "c=3.93",
+   "band": [
+    1.8507737287432775,
+    8.328481779344747
+   ],
+   "center": 3.9260839621088497,
+   "r2_per_seed": [
+    0.8456241806681029,
+    0.8983040198525506,
+    0.9269879778566456
+   ],
+   "r2_mean": 0.8903053927924329,
+   "r2_max": 0.9269879778566456,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": false
+  },
+  {
+   "label": "c=5.41",
+   "band": [
+    2.5506024205913898,
+    11.477710892661253
+   ],
+   "center": 5.410644803132983,
+   "r2_per_seed": [
+    0.8122691427808197,
+    0.8618260784213176,
+    0.9085543514540861
+   ],
+   "r2_mean": 0.8608831908854079,
+   "r2_max": 0.9085543514540861,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": true
+  },
+  {
+   "label": "c=7.46",
+   "band": [
+    3.5150556801690223,
+    15.817750560760597
+   ],
+   "center": 7.456559123087423,
+   "r2_per_seed": [
+    0.743015134275359,
+    0.8639501775446383,
+    0.8689392713581294
+   ],
+   "r2_mean": 0.8253015277260424,
+   "r2_max": 0.8689392713581294,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": true
+  },
+  {
+   "label": "c=10.28",
+   "band": [
+    4.844195369274249,
+    21.79887916173412
+   ],
+   "center": 10.27609018501888,
+   "r2_per_seed": [
+    0.6308901192712673,
+    0.8129169791481599,
+    0.8315015336485732
+   ],
+   "r2_mean": 0.7584362106893335,
+   "r2_max": 0.8315015336485732,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": true
+  },
+  {
+   "label": "c=14.16",
+   "band": [
+    6.675919504799912,
+    30.041637771599596
+   ],
+   "center": 14.161763857498666,
+   "r2_per_seed": [
+    0.5359466719604937,
+    0.8112377904909409,
+    0.7476910352584947
+   ],
+   "r2_mean": 0.6982918325699764,
+   "r2_max": 0.8112377904909409,
+   "all_below_cutoff": false,
+   "overlaps_fast_tertile": true
+  }
+ ],
+ "chosen_band": null,
+ "chosen_center": null,
+ "mechanism": "NO-BAND-FOUND",
+ "mechanism_detail": "no wide (rho=4.5) band below 0.1 on all seeds within the Nyquist-representable range (top center 14.16); the slow readout tracks wide messages across the whole representable band -- the 'untrackable wide band' premise fails and the control needs re-posing, not just re-centering.",
+ "hashes": {
+  "code": "dbd0a61d3d5e",
+  "spec": "a9930793e43c"
+ },
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER"
+ },
+ "wall_clock_s": 164.75619996599562
+}

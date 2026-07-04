@@ -1,0 +1,91 @@
+{
+ "stage": "1-cpu-sandbox",
+ "all_pass": true,
+ "window": {
+  "span": 1.5,
+  "dt_in": 0.09934588265796102,
+  "L": 3067,
+  "eval_start": 537,
+  "delays": [
+   0,
+   32,
+   64,
+   96
+  ]
+ },
+ "checks": {
+  "check1_repeater": {
+   "pass": true,
+   "params": {
+    "msg_band": [
+     0.2,
+     0.9
+    ],
+    "filter": "zero-phase brick-wall rFFT band-pass",
+    "rms_in": 0.7030511909588726,
+    "rms_target": 0.17855714485018517,
+    "scale": 0.25397459978220915,
+    "mean_out": -1.4479596017282772e-18,
+    "rms_out": 0.17855714485018517,
+    "oob_residual_frac": 3.4026144877772195e-31
+   },
+   "oob_low_amp": 0.002457587884284548,
+   "oob_high_amp": 0.0003627161139566952,
+   "in_band_amp": 0.2517525682760236
+  },
+  "check2_decoy": {
+   "pass": true,
+   "diff_A": 0.0,
+   "fit_match_r2": [
+    0.08205020129743479,
+    0.08205020129743479
+   ]
+  },
+  "check3_intersection": {
+   "pass": true,
+   "intersection": [
+    0,
+    4
+   ],
+   "dropped": {
+    "1": [
+     "stageB"
+    ],
+    "2": [
+     "direct"
+    ],
+    "3": [
+     "stageA"
+    ],
+    "5": [
+     "stageA",
+     "stageB",
+     "direct"
+    ]
+   }
+  },
+  "check4_violation": {
+   "pass": true,
+   "violation_band": [
+    2.0,
+    9.0
+   ],
+   "standard_band": [
+    0.2,
+    0.9
+   ],
+   "slow_tertile_omega": [
+    1.0,
+    3.1332278919274597
+   ],
+   "violation_power_support": [
+    3.072574968145344,
+    7.918582468240349
+   ],
+   "standard_power_support": [
+    0.30931962766563864,
+    0.8042310319306606
+   ]
+  }
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "stage": "2-smoke",
+ "seed": 0,
+ "K": 0.24,
+ "smoke_pass": true,
+ "neighborhood": [
+  0.975,
+  0.995
+ ],
+ "committed_refs": {
+  "stageA_seed0": 0.98147,
+  "direct_seed0": 0.000724,
+  "provenance": "decade_drive b0f7664 phase1_routing.json"
+ },
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER"
+ },
+ "r2": {
+  "m1_vs_m0": 0.9814697252519144,
+  "m2_vs_processed_m1": 0.9931383885847367,
+  "m2_vs_m0": 0.9623337121485657,
+  "direct_span3": 0.00072446334584364
+ },
+ "esp": {
+  "stageA": {
+   "d_slow": 3.371106714796894e-06,
+   "ok_slow": true
+  },
+  "stageB": {
+   "d_slow": 4.27965436061159e-09,
+   "ok_slow": true
+  },
+  "direct": {
+   "d_slow": 0.0003959391523955603,
+   "ok_slow": true
+  }
+ },
+ "stageA_demod": {
+  "cap": 1.9076873652929285,
+  "r2_d0": 0.9814697252519144,
+  "lam": 0.0001,
+  "r2_by_delay": [
+   0.9814697252519144,
+   0.4534075942316804,
+   0.30812661468949554,
+   0.1646834311198383
+  ],
+  "decoy_p95": -0.13146393898656833,
+  "decoy_mean": -0.5214090119397936
+ },
+ "direct_demod": {
+  "cap": 0.08591370639301776,
+  "r2_d0": 0.00072446334584364,
+  "lam": 1e-05,
+  "r2_by_delay": [
+   0.00072446334584364,
+   0.03984932336075098,
+   0.02220479535085429,
+   0.023135124335568857
+  ],
+  "decoy_p95": 0.033059950291262276,
+  "decoy_mean": -0.028231095963503768
+ },
+ "repeater": {
+  "msg_band": [
+   0.2,
+   0.9
+  ],
+  "filter": "zero-phase brick-wall rFFT band-pass",
+  "rms_in": 0.17143250243029456,
+  "rms_target": 0.1747968052847344,
+  "scale": 1.0196246499744572,
+  "mean_out": -4.680782185507906e-19,
+  "rms_out": 0.1747968052847344,
+  "oob_residual_frac": 1.1336251184798587e-31,
+  "dc_B": 0.5321028176858988,
+  "clip_frac": 0.0
+ },
+ "seed_scheme": {
+  "stageA": {
+   "build": 0,
+   "enc": 5000,
+   "msg": 1000,
+   "rep": 9000,
+   "decoys_base": 40000
+  },
+  "stageB": {
+   "build": 100,
+   "enc": 5100,
+   "carrier": 2000,
+   "rep": 9100
+  },
+  "direct": {
+   "build": 0,
+   "enc": 5000,
+   "msg": 1000,
+   "rep": 9000
+  }
+ },
+ "window": {
+  "span": 1.5,
+  "dt_in": 0.09934588265796102,
+  "L": 4332,
+  "eval_start": 537,
+  "ntr": 2656,
+  "n_sub": 8,
+  "direct": {
+   "span": 3.0,
+   "dt_in": 0.0031415926535897933,
+   "L": 130220,
+   "eval_start": 10220,
+   "n_sub": 8
+  }
+ },
+ "wall_clock_s": {
+  "stageA": 45.50783789200068,
+  "stageB": 18.800629837000088,
+  "direct": 210.42098377900038,
+  "total": 274.7466119029996
+ }
+}
