@@ -1,0 +1,279 @@
+{
+ "gate": "relay-gate1",
+ "stage": "1-cpu-sandbox",
+ "H": 5,
+ "all_pass": true,
+ "framing": "Compound span 1.5*H is a claim about the INFORMATION PATH (H successive square-law demodulations end-to-end), NOT one physical spectrum; each repeater re-injects into a fresh span-1.5 network. This gate measures the SHAPE of the loss curve (budget vs compounding); the chain-vs-direct floor was settled at Gate-0 (commit 8361553) and direct arms are NOT re-run (committed b0f7664 floors cited).",
+ "window": {
+  "span": 1.5,
+  "dt_in": 0.09934588265796102,
+  "L": 3067,
+  "eval_start": 537,
+  "n_msg": 8
+ },
+ "checks": {
+  "check0_seed_scheme": {
+   "pass": true,
+   "report": {
+    "ok": true,
+    "seed_max": 9,
+    "families": {
+     "build": [
+      0,
+      409
+     ],
+     "enc": [
+      5000,
+      5409
+     ],
+     "rep": [
+      9000,
+      9709
+     ],
+     "carrier_arg": [
+      2000,
+      2309
+     ],
+     "carrier_rademacher": [
+      1777,
+      3086
+     ],
+     "msg": [
+      1000,
+      1009
+     ],
+     "scramble_laplacian": [
+      70000,
+      70009
+     ],
+     "decoy_bases": {
+      "1": 40000,
+      "2": 60000,
+      "3": 100000,
+      "4": 120000,
+      "5": 140000
+     },
+     "e2e_decoy_base": 80000,
+     "N_DEC": 60
+    },
+    "collisions": {
+     "net_drive_vs_decoy": [],
+     "net_drive_vs_msg": [],
+     "msg_vs_decoy": [],
+     "scramble_lap_vs_all": [],
+     "decoy_pairwise_overlaps": {}
+    }
+   }
+  },
+  "check1_wiring": {
+   "pass": true,
+   "n_hops": 5,
+   "n_reps": 4,
+   "builds": [
+    0,
+    100,
+    200,
+    300,
+    400
+   ],
+   "r2_cum": [
+    1.0,
+    0.9979360633218798,
+    0.9979360633218798,
+    0.9979360633218798,
+    0.9979360633218798
+   ],
+   "scales": [
+    1.0016962127579632,
+    1.0,
+    1.0000000000000002,
+    1.0
+   ]
+  },
+  "check2_schema": {
+   "pass": true,
+   "hop_keys": [
+    "decoy_p95",
+    "esp",
+    "r2_cum",
+    "r2_hop",
+    "repeater_in",
+    "rms_in",
+    "rms_target",
+    "scale",
+    "seeds",
+    "stage"
+   ]
+  },
+  "check3_intersection": {
+   "pass": true,
+   "intersection": [
+    0,
+    2
+   ]
+  },
+  "check4_losslaw": {
+   "pass": true,
+   "A": {
+    "rho_valid_min": 0.2,
+    "valid_pairs": 20,
+    "n_seed_slopes": 5,
+    "rho_mean": 0.8999999999999998,
+    "rho_by_level": {
+     "2": 0.9,
+     "3": 0.9,
+     "4": 0.9,
+     "5": 0.9
+    },
+    "rho_level_n": {
+     "2": 5,
+     "3": 5,
+     "4": 5,
+     "5": 5
+    },
+    "classification": "A",
+    "slope_mean": 6.133573451401389e-17,
+    "slope_se": 0.0,
+    "slope_thr": 0.01,
+    "slope_eps": 0.01,
+    "margin": 0.00999999999999994,
+    "H_half_extrap": 7.387065107273301,
+    "r2_1_mean": 0.9800000000000001
+   },
+   "A_jitter": {
+    "rho_valid_min": 0.2,
+    "valid_pairs": 20,
+    "n_seed_slopes": 5,
+    "rho_mean": 0.8999121711908368,
+    "rho_by_level": {
+     "2": 0.9017960245166086,
+     "3": 0.8975917396762686,
+     "4": 0.9011482693964192,
+     "5": 0.8991126511740509
+    },
+    "rho_level_n": {
+     "2": 5,
+     "3": 5,
+     "4": 5,
+     "5": 5
+    },
+    "classification": "A",
+    "slope_mean": -0.00044935903075219737,
+    "slope_se": 0.0005489439533018898,
+    "slope_thr": 0.01,
+    "slope_eps": 0.01,
+    "margin": 0.009550640969247803,
+    "H_half_extrap": 7.375365953023135,
+    "r2_1_mean": 0.9794019492774908
+   },
+   "B": {
+    "rho_valid_min": 0.2,
+    "valid_pairs": 20,
+    "n_seed_slopes": 5,
+    "rho_mean": 0.7500197443408153,
+    "rho_by_level": {
+     "2": 0.95,
+     "3": 0.8500537056928034,
+     "4": 0.7000252716704575,
+     "5": 0.5
+    },
+    "rho_level_n": {
+     "2": 5,
+     "3": 5,
+     "4": 5,
+     "5": 5
+    },
+    "classification": "B",
+    "slope_mean": -0.15000284340223446,
+    "slope_se": 0.0,
+    "slope_thr": 0.01,
+    "slope_eps": 0.01,
+    "margin": -0.14000284340223446,
+    "H_half_extrap": 3.339409103541247,
+    "r2_1_mean": 0.9800000000000001
+   },
+   "guard": {
+    "rho_valid_min": 0.2,
+    "valid_pairs": 10,
+    "n_seed_slopes": 5,
+    "rho_mean": 0.4051020408163265,
+    "rho_by_level": {
+     "2": 0.5102040816326531,
+     "3": 0.3,
+     "4": null,
+     "5": null
+    },
+    "rho_level_n": {
+     "2": 5,
+     "3": 5,
+     "4": 0,
+     "5": 0
+    },
+    "classification": "B",
+    "slope_mean": -0.21020408163265278,
+    "slope_se": 0.0,
+    "slope_thr": 0.01,
+    "slope_eps": 0.01,
+    "margin": -0.20020408163265277,
+    "H_half_extrap": 1.7447237062476073,
+    "r2_1_mean": 0.9800000000000001
+   },
+   "under": {
+    "rho_valid_min": 0.2,
+    "valid_pairs": 4,
+    "n_seed_slopes": 1,
+    "rho_mean": 0.9,
+    "rho_by_level": {
+     "2": 0.9,
+     "3": 0.9,
+     "4": 0.9,
+     "5": 0.9
+    },
+    "rho_level_n": {
+     "2": 1,
+     "3": 1,
+     "4": 1,
+     "5": 1
+    },
+    "classification": "underpowered",
+    "slope_mean": null,
+    "slope_se": null,
+    "slope_thr": null,
+    "slope_eps": 0.01,
+    "margin": null,
+    "H_half_extrap": null
+   }
+  },
+  "check5_violation": {
+   "pass": true,
+   "first_repeater": {
+    "msg_band": [
+     0.2,
+     0.9
+    ],
+    "filter": "zero-phase brick-wall rFFT band-pass",
+    "rms_in": 0.004375081982164968,
+    "rms_target": 0.14276443319454504,
+    "scale": 32.631258974465986,
+    "mean_out": -8.776466597827324e-20,
+    "rms_out": 0.14276443319454504,
+    "oob_residual_frac": 1.0311451235595027e-31,
+    "dc": 0.5527912168305219,
+    "clip_frac": 0.0071146245059288534
+   },
+   "e2e_collapse": -1.79836139712822,
+   "precheck_scale": 32.631258974465986
+  },
+  "check6_decoy": {
+   "pass": true,
+   "diff_stage1": 0.0,
+   "bases": {
+    "1": 40000,
+    "2": 60000,
+    "3": 100000,
+    "4": 120000,
+    "5": 140000
+   }
+  }
+ }
+}
