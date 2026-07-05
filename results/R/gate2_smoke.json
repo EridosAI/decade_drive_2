@@ -1,0 +1,401 @@
+{
+ "gate": "relay-gate2",
+ "stage": "2-smoke",
+ "seed": 0,
+ "H": 10,
+ "framing": "Compound span 1.5*H is an INFORMATION-PATH claim (H successive square-law demodulations end-to-end), NOT one physical spectrum; each repeater re-injects into a fresh span-1.5 network. Depth extension H=5->10; the insertion loss rho_2 is EXCLUDED from the trend statistic by pre-registration (a known one-time cost). No new chain-vs-direct claim; committed b0f7664 floors cited.",
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "<default>",
+  "CUDA_VISIBLE_DEVICES": "<unset>"
+ },
+ "bridges": {
+  "hop1_ref": 0.98147,
+  "hop1_got": 0.9814697252519144,
+  "hop1_match": true,
+  "prefix_ref": [
+   0.98147,
+   0.962334,
+   0.931043,
+   0.896005,
+   0.842353
+  ],
+  "prefix_got": [
+   0.98147,
+   0.962334,
+   0.931043,
+   0.896005,
+   0.842353
+  ],
+  "prefix_match": true
+ },
+ "record": {
+  "seed": 0,
+  "arm": "chain",
+  "H": 10,
+  "band": [
+   0.2,
+   0.9
+  ],
+  "hops": [
+   {
+    "stage": 1,
+    "seeds": {
+     "build": 0,
+     "enc": 5000,
+     "rep": 9000,
+     "carrier": null,
+     "decoy_base": 40000
+    },
+    "repeater_in": null,
+    "r2_cum": 0.9814697252519144,
+    "r2_hop": 0.9814697252519144,
+    "esp": {
+     "d_slow": 3.371106714796894e-06,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.13146393898656833,
+    "rms_in": null,
+    "rms_target": null,
+    "scale": null
+   },
+   {
+    "stage": 2,
+    "seeds": {
+     "build": 100,
+     "enc": 5100,
+     "rep": 9100,
+     "carrier": 2000,
+     "decoy_base": 60000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17143250243029456,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0196246499744572,
+     "mean_out": -4.680782185507906e-19,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.1336251184798587e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.9623337121485657,
+    "r2_hop": 0.9931383885847367,
+    "esp": {
+     "d_slow": 4.27965436061159e-09,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.0704449719286889,
+    "rms_in": 0.17143250243029456,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0196246499744572
+   },
+   {
+    "stage": 3,
+    "seeds": {
+     "build": 200,
+     "enc": 5200,
+     "rep": 9200,
+     "carrier": 2100,
+     "decoy_base": 100000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17430534877323187,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0028195148052623,
+     "mean_out": -2.106351983478558e-18,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.4107206348262712e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.9310428135709514,
+    "r2_hop": 0.9859855073689534,
+    "esp": {
+     "d_slow": 2.0997579375103192e-09,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.025427456474378978,
+    "rms_in": 0.17430534877323187,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0028195148052623
+   },
+   {
+    "stage": 4,
+    "seeds": {
+     "build": 300,
+     "enc": 5300,
+     "rep": 9300,
+     "carrier": 2200,
+     "decoy_base": 120000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17352993626586596,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0073005790593241,
+     "mean_out": 5.850977731884883e-19,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.1975196977571164e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.8960052010272247,
+    "r2_hop": 0.9871515438267011,
+    "esp": {
+     "d_slow": 1.3104763690973982e-16,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.029168778197258546,
+    "rms_in": 0.17352993626586596,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0073005790593241
+   },
+   {
+    "stage": 5,
+    "seeds": {
+     "build": 400,
+     "enc": 5400,
+     "rep": 9400,
+     "carrier": 2300,
+     "decoy_base": 140000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17356564242205857,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0070933558364161,
+     "mean_out": -3.2765475298555343e-18,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.2143410019118505e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.8423527338185237,
+    "r2_hop": 0.9830356957954848,
+    "esp": {
+     "d_slow": 1.3190225677406635e-16,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.00013757500832061636,
+    "rms_in": 0.17356564242205857,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0070933558364161
+   },
+   {
+    "stage": 6,
+    "seeds": {
+     "build": 500,
+     "enc": 5500,
+     "rep": 9500,
+     "carrier": 2400,
+     "decoy_base": 160000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17311371926524396,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0097224300109433,
+     "mean_out": -9.361564371015812e-19,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.116950463221865e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.8024987871864846,
+    "r2_hop": 0.989939208323224,
+    "esp": {
+     "d_slow": 2.811251177110936e-09,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.0717536811069935,
+    "rms_in": 0.17311371926524396,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0097224300109433
+   },
+   {
+    "stage": 7,
+    "seeds": {
+     "build": 600,
+     "enc": 5600,
+     "rep": 9600,
+     "carrier": 2500,
+     "decoy_base": 180000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17304397142848255,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0101294130144043,
+     "mean_out": -4.680782185507906e-19,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.1275290876310211e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.7522721440876747,
+    "r2_hop": 0.9894540918671411,
+    "esp": {
+     "d_slow": 2.723141735881117e-05,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.029965628185461793,
+    "rms_in": 0.17304397142848255,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0101294130144043
+   },
+   {
+    "stage": 8,
+    "seeds": {
+     "build": 700,
+     "enc": 5700,
+     "rep": 9700,
+     "carrier": 2600,
+     "decoy_base": 200000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.1732482386935116,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.008938426173338,
+     "mean_out": -1.053175991739279e-18,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.32071224125093e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.6921881235351979,
+    "r2_hop": 0.992499358079465,
+    "esp": {
+     "d_slow": 1.478945970755671e-12,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.02652197243789748,
+    "rms_in": 0.1732482386935116,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.008938426173338
+   },
+   {
+    "stage": 9,
+    "seeds": {
+     "build": 800,
+     "enc": 5800,
+     "rep": 9800,
+     "carrier": 2700,
+     "decoy_base": 220000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.17379527327024083,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0057627114687766,
+     "mean_out": -1.1701955463769766e-18,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.3995019029851725e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.6103552349732998,
+    "r2_hop": 0.988593868166357,
+    "esp": {
+     "d_slow": 4.125876428966296e-06,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.09367292275612087,
+    "rms_in": 0.17379527327024083,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0057627114687766
+   },
+   {
+    "stage": 10,
+    "seeds": {
+     "build": 900,
+     "enc": 5900,
+     "rep": 9900,
+     "carrier": 2800,
+     "decoy_base": 240000
+    },
+    "repeater_in": {
+     "msg_band": [
+      0.2,
+      0.9
+     ],
+     "filter": "zero-phase brick-wall rFFT band-pass",
+     "rms_in": 0.1747823314935625,
+     "rms_target": 0.1747968052847344,
+     "scale": 1.0000828103793342,
+     "mean_out": -4.680782185507906e-19,
+     "rms_out": 0.1747968052847344,
+     "oob_residual_frac": 1.2977525178079157e-31,
+     "dc": 0.5321028176858988,
+     "clip_frac": 0.0
+    },
+    "r2_cum": 0.5593636911734128,
+    "r2_hop": 0.9921732123681305,
+    "esp": {
+     "d_slow": 9.248291515850703e-06,
+     "ok_slow": true
+    },
+    "decoy_p95": -0.04728287792623434,
+    "rms_in": 0.1747823314935625,
+    "rms_target": 0.1747968052847344,
+    "scale": 1.0000828103793342
+   }
+  ],
+  "r2_cum": [
+   0.9814697252519144,
+   0.9623337121485657,
+   0.9310428135709514,
+   0.8960052010272247,
+   0.8423527338185237,
+   0.8024987871864846,
+   0.7522721440876747,
+   0.6921881235351979,
+   0.6103552349732998,
+   0.5593636911734128
+  ],
+  "esp_all_stages": true,
+  "e2e_decoy_p95": -0.233700818877038,
+  "e2e_decoy_mean": -1.3180409110881173
+ },
+ "wall_clock_s": 121.43710866900074
+}
