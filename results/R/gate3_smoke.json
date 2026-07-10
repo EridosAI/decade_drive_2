@@ -1,0 +1,197 @@
+{
+ "gate": "relay-gate3",
+ "stage": "2-smoke",
+ "seed": 0,
+ "framing": "Stage-A Phase-1 replica (N=500, span 1.5, K=0.24), message fast-tertile injected, slow-tertile readout. Ablation is FIT-TIME ONLY (subset the SAME trajectory's readout features; SQ/LIN are column-subsets of FULL). Retention R_abl=r2_abl/r2_FULL per (band,seed); a band classifies only where FULL r2>0.2. SUPRA is carrier-comparable (injection ill-posedness may contribute). No chains; drift-attribution is out of scope.",
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "<default>",
+  "CUDA_VISIBLE_DEVICES": "<unset>"
+ },
+ "anchor_provenance": {
+  "repo": "decade_drive (github.com/EridosAI/decade_drive)",
+  "commit": "b0f7664",
+  "path": "results/D/phase1_routing.json",
+  "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+  "sha256_scope": "working tree AND the blob as committed at b0f7664 (identical)",
+  "ref_table_cells": "all 40 REF_TABLE cells (4 (span,K) keys x 10 seeds) faithful to the committed record: 40/40 r2_d0 and 40/40 ESP ok_slow flags, 0 discrepancies, at the 6-dp precision REF_TABLE stores",
+  "mean_0_7": "phase1_routing.json full-precision mean(seeds 0-7) at (span 1.5, K=0.24) = 0.9864540115271048, BIT-EXACT to the committed gate1 record anchor mean; REF_TABLE's own 6-dp mean = 0.986454 (equal at 6 dp)"
+ },
+ "anchor_ref": 0.98147,
+ "anchor_got": 0.9814697252519144,
+ "anchor_match": true,
+ "runs": {
+  "SUB": {
+   "band": "SUB",
+   "band_hz": [
+    0.2,
+    0.9
+   ],
+   "seed": 0,
+   "K": 0.24,
+   "seeds": {
+    "build": 0,
+    "enc": 5000,
+    "rep": 9000,
+    "msg": 1000,
+    "rademacher": 1777,
+    "decoy_base": 300000
+   },
+   "r2": {
+    "FULL": 0.9814697252519144,
+    "SQ": 0.983081685160254,
+    "LIN": -0.02057549606813036
+   },
+   "decoy_p95": {
+    "FULL": -0.1859717805983444,
+    "SQ": -0.10630851002016592,
+    "LIN": 0.06421177291362455
+   },
+   "esp": {
+    "d_slow": 3.371106714796894e-06,
+    "ok_slow": true
+   },
+   "msg_dominant_band": [
+    0.26664791864397397,
+    0.49996484745745123
+   ],
+   "ablation": {
+    "FULL": {
+     "r2_d0": 0.9814697252519144,
+     "decoy_p95": -0.1859717805983444,
+     "lam": 0.0001,
+     "cap": 1.9076873652929285
+    },
+    "SQ": {
+     "r2_d0": 0.983081685160254,
+     "decoy_p95": -0.10630851002016592,
+     "lam": 1e-05,
+     "cap": 1.9800219012593359
+    },
+    "LIN": {
+     "r2_d0": -0.02057549606813036,
+     "decoy_p95": 0.06421177291362455,
+     "lam": 10.0,
+     "cap": 0.03838321594351979
+    }
+   }
+  },
+  "RES": {
+   "band": "RES",
+   "band_hz": [
+    2.0,
+    9.0
+   ],
+   "seed": 0,
+   "K": 0.24,
+   "seeds": {
+    "build": 0,
+    "enc": 5000,
+    "rep": 9000,
+    "msg": 1000,
+    "rademacher": 1777,
+    "decoy_base": 320000
+   },
+   "r2": {
+    "FULL": 0.8250513351230497,
+    "SQ": 0.8449518232838882,
+    "LIN": -0.13046283927212454
+   },
+   "decoy_p95": {
+    "FULL": -0.1124981858422088,
+    "SQ": -0.06376912762943515,
+    "LIN": 0.005674860127713492
+   },
+   "esp": {
+    "d_slow": 3.3225451773089636e-06,
+    "ok_slow": true
+   },
+   "msg_dominant_band": [
+    2.66647918643974,
+    4.966317484744015
+   ],
+   "ablation": {
+    "FULL": {
+     "r2_d0": 0.8250513351230497,
+     "decoy_p95": -0.1124981858422088,
+     "lam": 0.0001,
+     "cap": 0.8250513351230497
+    },
+    "SQ": {
+     "r2_d0": 0.8449518232838882,
+     "decoy_p95": -0.06376912762943515,
+     "lam": 1e-05,
+     "cap": 1.049457344054478
+    },
+    "LIN": {
+     "r2_d0": -0.13046283927212454,
+     "decoy_p95": 0.005674860127713492,
+     "lam": 0.001,
+     "cap": 0.0
+    }
+   }
+  },
+  "SUPRA": {
+   "band": "SUPRA",
+   "band_hz": [
+    10.0,
+    28.0
+   ],
+   "seed": 0,
+   "K": 0.24,
+   "seeds": {
+    "build": 0,
+    "enc": 5000,
+    "rep": 9000,
+    "msg": 1000,
+    "rademacher": 1777,
+    "decoy_base": 340000
+   },
+   "r2": {
+    "FULL": 0.4821323828862836,
+    "SQ": 0.5133300707048325,
+    "LIN": -0.006425047747883106
+   },
+   "decoy_p95": {
+    "FULL": -0.03451902932526448,
+    "SQ": -0.02836549497686287,
+    "LIN": 0.006635918508597004
+   },
+   "esp": {
+    "d_slow": 3.308017730952149e-06,
+    "ok_slow": true
+   },
+   "msg_dominant_band": [
+    12.165811288131314,
+    18.615357820332434
+   ],
+   "ablation": {
+    "FULL": {
+     "r2_d0": 0.4821323828862836,
+     "decoy_p95": -0.03451902932526448,
+     "lam": 0.1,
+     "cap": 0.8460297952175067
+    },
+    "SQ": {
+     "r2_d0": 0.5133300707048325,
+     "decoy_p95": -0.02836549497686287,
+     "lam": 0.01,
+     "cap": 0.9087781356189039
+    },
+    "LIN": {
+     "r2_d0": -0.006425047747883106,
+     "decoy_p95": 0.006635918508597004,
+     "lam": 10.0,
+     "cap": 0.01234088695492741
+    }
+   }
+  }
+ },
+ "wall_clock_s": 43.006085433997214
+}

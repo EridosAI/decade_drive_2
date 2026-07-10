@@ -1,0 +1,86 @@
+{
+ "gate": "relay-gate3",
+ "stage": "1-cpu-sandbox",
+ "all_pass": true,
+ "framing": "Stage-A Phase-1 replica (N=500, span 1.5, K=0.24), message fast-tertile injected, slow-tertile readout. Ablation is FIT-TIME ONLY (subset the SAME trajectory's readout features; SQ/LIN are column-subsets of FULL). Retention R_abl=r2_abl/r2_FULL per (band,seed); a band classifies only where FULL r2>0.2. SUPRA is carrier-comparable (injection ill-posedness may contribute). No chains; drift-attribution is out of scope.",
+ "checks": {
+  "check0_seed_scheme": {
+   "pass": true,
+   "report": {
+    "ok": true,
+    "seed_max": 9,
+    "decoy_bases": {
+     "SUB": 300000,
+     "RES": 320000,
+     "SUPRA": 340000
+    },
+    "decoy_ranges": {
+     "SUB": [
+      300000,
+      301859
+     ],
+     "RES": [
+      320000,
+      321859
+     ],
+     "SUPRA": [
+      340000,
+      341859
+     ]
+    },
+    "pairwise_overlaps": {},
+    "vs_committed_overlaps": {}
+   }
+  },
+  "check1_ablation_subset": {
+   "pass": true
+  },
+  "check2_isolation": {
+   "pass": true,
+   "power_enc": [
+    0.9999999999999996,
+    0.9999999999999997,
+    -0.008966653972621641
+   ],
+   "linear_enc": [
+    0.9999999999999983,
+    -0.013056005852642771,
+    0.9999999999999996
+   ]
+  },
+  "check3_decoy": {
+   "pass": true,
+   "gen_ok": true,
+   "sub_band_ok": true,
+   "proto_ok": true
+  },
+  "check4_classifier": {
+   "pass": true
+  },
+  "check5_intersection": {
+   "pass": true,
+   "intersection": [
+    0,
+    1,
+    3
+   ]
+  },
+  "check6_anchor": {
+   "pass": true,
+   "ref_seed0": 0.98147,
+   "ref_mean_0_7": 0.986454,
+   "sub_msg_bit_identical": true
+  },
+  "check7_band_geometry": {
+   "pass": true,
+   "slow": [
+    1.0,
+    3.1332278919274597
+   ],
+   "fast": [
+    10.092715146305713,
+    31.622776601683793
+   ]
+  }
+ }
+}
