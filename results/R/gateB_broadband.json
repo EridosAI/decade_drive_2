@@ -1,0 +1,617 @@
+{
+ "gate": "relay-gateB",
+ "stage": "1-analysis",
+ "framing": "ANALYSIS gate; stage-1 is a RETRODICTION on committed data (no new integrations). Fit r2 vs band center c = sqrt(lo*hi) on NON-OVERLAP band means only; OVERLAP stratum reported, not gating. Falsification weight rests on the LOCKED P1 predictions (stage-2, separate go) and on Gate-L.",
+ "honesty": "Honesty clause (mandatory): stage-1 is a RETRODICTION -- the sweep means and Gate-3 points are committed, public, and known to the spec author before the spec was drafted. Pre-registration binds the functional forms, parameter counts, weights, strata, dedupe rule, and acceptance thresholds -- NOT data blindness. Falsification weight rests on the locked P1 predictions (stage-2) and on Gate-L. No fit was run before ratification; all numbers of record come from the ratified pipeline.",
+ "hashes": {
+  "code": "2cf36c7299ab",
+  "spec": "b536a43d66e5"
+ },
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "cpu",
+  "device": "cpu:cpu",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "cpu",
+  "CUDA_VISIBLE_DEVICES": ""
+ },
+ "wall_clock_s": 0.03716061697923578,
+ "points": [
+  {
+   "key": "sweep[0]+gate3[SUB]",
+   "band": [
+    0.2,
+    0.9
+   ],
+   "center": 0.42426406871192857,
+   "overlap": false,
+   "source": "merged(bit-identical)",
+   "n": 8,
+   "mean": 0.9864540115271048,
+   "sd": 0.0031578957043713477,
+   "se": 0.0011164847334204243,
+   "weight": 2500.0,
+   "r2": {
+    "0": 0.9814697252519144,
+    "1": 0.9877764190148102,
+    "2": 0.9900247290105952,
+    "3": 0.9823541653237987,
+    "4": 0.9900557353356574,
+    "5": 0.986100475787461,
+    "6": 0.9871637983892345,
+    "7": 0.9866870441033668
+   }
+  },
+  {
+   "key": "sweep[2]",
+   "band": [
+    0.7071067811865476,
+    3.181980515339464
+   ],
+   "center": 1.5,
+   "overlap": false,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.9368246548621476,
+   "sd": 0.049803662887904054,
+   "se": 0.02875415817496078,
+   "weight": 1209.4799829392193,
+   "r2": {
+    "0": 0.8793909419549869,
+    "1": 0.9680775127600063,
+    "2": 0.9630055098714493
+   }
+  },
+  {
+   "key": "sweep[3]",
+   "band": [
+    0.9744833956205169,
+    4.385175280292326
+   ],
+   "center": 2.067191451590882,
+   "overlap": false,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.9396660543456123,
+   "sd": 0.015647128709417035,
+   "se": 0.009033873972426647,
+   "weight": 2500.0,
+   "r2": {
+    "0": 0.9251950650077455,
+    "1": 0.9375326916916613,
+    "2": 0.9562704063374305
+   }
+  },
+  {
+   "key": "sweep[4]",
+   "band": [
+    1.3429624967626588,
+    6.043331235431964
+   ],
+   "center": 2.8488536650202785,
+   "overlap": false,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.9073276103516038,
+   "sd": 0.06514168901189972,
+   "se": 0.037609571686487195,
+   "weight": 706.9736462241257,
+   "r2": {
+    "0": 0.8323380702647256,
+    "1": 0.9397364876030228,
+    "2": 0.9499082731870631
+   }
+  },
+  {
+   "key": "sweep[5]",
+   "band": [
+    1.8507737287432775,
+    8.328481779344747
+   ],
+   "center": 3.9260839621088497,
+   "overlap": false,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.8903053927924329,
+   "sd": 0.04126742540272789,
+   "se": 0.02382575916502775,
+   "weight": 1761.596768333298,
+   "r2": {
+    "0": 0.8456241806681029,
+    "1": 0.8983040198525506,
+    "2": 0.9269879778566456
+   }
+  },
+  {
+   "key": "sweep[1]+gate3[RES]",
+   "band": [
+    2.0,
+    9.0
+   ],
+   "center": 4.242640687119285,
+   "overlap": false,
+   "source": "merged(bit-identical)",
+   "n": 8,
+   "mean": 0.8600663096799446,
+   "sd": 0.04776008988957962,
+   "se": 0.016885741715500405,
+   "weight": 2500.0,
+   "r2": {
+    "0": 0.8250513351230497,
+    "1": 0.9036365718389542,
+    "2": 0.9240383060922357,
+    "3": 0.8150753561000615,
+    "4": 0.785113804938911,
+    "5": 0.8611509822957406,
+    "6": 0.887343409507232,
+    "7": 0.8791207115433715
+   }
+  },
+  {
+   "key": "sweep[6]",
+   "band": [
+    2.5506024205913898,
+    11.477710892661253
+   ],
+   "center": 5.410644803132983,
+   "overlap": true,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.8608831908854079,
+   "sd": 0.048149528865739116,
+   "se": 0.027799143451988136,
+   "weight": 1294.0086240453545,
+   "r2": {
+    "0": 0.8122691427808197,
+    "1": 0.8618260784213176,
+    "2": 0.9085543514540861
+   }
+  },
+  {
+   "key": "sweep[7]",
+   "band": [
+    3.5150556801690223,
+    15.817750560760597
+   ],
+   "center": 7.456559123087423,
+   "overlap": true,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.8253015277260424,
+   "sd": 0.07130575484917355,
+   "se": 0.04116839675693981,
+   "weight": 590.0272793172674,
+   "r2": {
+    "0": 0.743015134275359,
+    "1": 0.8639501775446383,
+    "2": 0.8689392713581294
+   }
+  },
+  {
+   "key": "sweep[8]",
+   "band": [
+    4.844195369274249,
+    21.79887916173412
+   ],
+   "center": 10.27609018501888,
+   "overlap": true,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.7584362106893335,
+   "sd": 0.11084832201487752,
+   "se": 0.06399830855450786,
+   "weight": 244.15353021659013,
+   "r2": {
+    "0": 0.6308901192712673,
+    "1": 0.8129169791481599,
+    "2": 0.8315015336485732
+   }
+  },
+  {
+   "key": "sweep[9]",
+   "band": [
+    6.675919504799912,
+    30.041637771599596
+   ],
+   "center": 14.161763857498666,
+   "overlap": true,
+   "source": "gate0_bandsweep",
+   "n": 3,
+   "mean": 0.6982918325699764,
+   "sd": 0.14414059423053646,
+   "se": 0.08321961088015285,
+   "weight": 144.39383078796675,
+   "r2": {
+    "0": 0.5359466719604937,
+    "1": 0.8112377904909409,
+    "2": 0.7476910352584947
+   }
+  },
+  {
+   "key": "gate3[SUPRA]",
+   "band": [
+    10.0,
+    28.0
+   ],
+   "center": 16.73320053068151,
+   "overlap": true,
+   "source": "gate3_mechanism",
+   "n": 8,
+   "mean": 0.6650374447295485,
+   "sd": 0.12605745645746738,
+   "se": 0.044568041140101565,
+   "weight": 503.44601470268503,
+   "r2": {
+    "0": 0.4821323828862836,
+    "1": 0.8043767661638126,
+    "2": 0.7159344542528667,
+    "3": 0.46369461560389225,
+    "4": 0.666422220027421,
+    "5": 0.7378265217439759,
+    "6": 0.7620610308027096,
+    "7": 0.6878515663554267
+   }
+  }
+ ],
+ "dedupe": [
+  {
+   "band": [
+    0.2,
+    0.9
+   ],
+   "a": "sweep[0]",
+   "b": "gate3[SUB]",
+   "shared_seeds": [
+    0,
+    1,
+    2
+   ],
+   "bit_identical": {
+    "0": true,
+    "1": true,
+    "2": true
+   },
+   "merged": true,
+   "unresolvable": false
+  },
+  {
+   "band": [
+    2.0,
+    9.0
+   ],
+   "a": "sweep[1]",
+   "b": "gate3[RES]",
+   "shared_seeds": [
+    0,
+    1,
+    2
+   ],
+   "bit_identical": {
+    "0": true,
+    "1": true,
+    "2": true
+   },
+   "merged": true,
+   "unresolvable": false
+  }
+ ],
+ "verdict": {
+  "framing": "ANALYSIS gate; stage-1 is a RETRODICTION on committed data (no new integrations). Fit r2 vs band center c = sqrt(lo*hi) on NON-OVERLAP band means only; OVERLAP stratum reported, not gating. Falsification weight rests on the LOCKED P1 predictions (stage-2, separate go) and on Gate-L.",
+  "honesty": "Honesty clause (mandatory): stage-1 is a RETRODICTION -- the sweep means and Gate-3 points are committed, public, and known to the spec author before the spec was drafted. Pre-registration binds the functional forms, parameter counts, weights, strata, dedupe rule, and acceptance thresholds -- NOT data blindness. Falsification weight rests on the locked P1 predictions (stage-2) and on Gate-L. No fit was run before ratification; all numbers of record come from the ratified pipeline.",
+  "input_checks": {
+   "ok": true,
+   "reasons": [],
+   "sweep_sha256": "881c44bee77620fc45218e1c4b34975b7cd8f60d4cd6925b8583e33c3eb6d10e",
+   "gate3_recs_sha16": "44475823f7f72d4c",
+   "gate3_file_sha256": "878c154850c7aec578a73979dbd562ef81502d092002a6da365480a8584a8f57"
+  },
+  "operationalization": {
+   "se_floor": 0.02,
+   "resid_tight": 0.03,
+   "resid_loose": 0.06,
+   "cliff_factor": 1.5,
+   "cliff_floor": 0.05,
+   "p_range": [
+    0.5,
+    4.0
+   ],
+   "lambda_pinned": 0.1,
+   "min_tight": 5,
+   "wrmse": "sqrt(sum_b w_b*resid_b^2 / sum_b w_b), w_b = 1/max(SE_b,0.02)^2 -- NOTE: this definition also sets best-smooth selection and the cliff ratio (the branch)",
+   "cov": "(J^T W J)^-1 UNSCALED, params (logA, p) -- Jason-ratified as independently reproduced; param CIs reported as +/- 2sd (exp-transformed for A)",
+   "sigma_pred": "sqrt(g^T Cov g + SE_FLOOR^2) -- fit covariance + pinned floor in quadrature ONLY, no model-error term",
+   "h3_center": "sqrt(2*9) = 4.2426... = the COMMITTED swept center of band [2,9] (spec display '4.24'); exact band [3.4641, 5.1962]",
+   "at_bound_policy": "a fitted param pinned at a prior bound is flagged; covariance is then conditional",
+   "reread_lock": "--reread asserts EVERY numeric substructure (fits/residuals/ratio/LOCKED P1) byte-identical to the stage-1 record; loud failure on drift, never overwrite",
+   "stage2_pass": "|mean_obs - pred| <= max(2*sigma_pred, 0.05) for ALL THREE (conjunction), EVALUATED AT STAGE-2 from the formula + byte-locked (pred, sigma) -- windows are NOT stored numbers (Jason's ruling: a stored/display-rounded window is never rule-faithful); any other pattern reported as-is; no threshold moves after data"
+  },
+  "n_non_overlap": 6,
+  "n_overlap": 5,
+  "fits": {
+   "M1": {
+    "theta": [
+     3.396468345918371,
+     1.0428964385184396
+    ],
+    "cov": [
+     [
+      0.20311384186215384,
+      0.15186343283063336
+     ],
+     [
+      0.15186343283063336,
+      0.12208539399600733
+     ]
+    ],
+    "theta_sd": [
+     0.45068153042048864,
+     0.3494072036979308
+    ],
+    "at_bound": [
+     false,
+     false
+    ],
+    "wrmse": 0.00860104001751341,
+    "chi2": 0.8269285758221202,
+    "chi2_red": 0.20673214395553005,
+    "converged": true,
+    "fit": [
+     0.9864889856884985,
+     0.9513675850018505,
+     0.9333376336124949,
+     0.9092608127042674,
+     0.8776281766226686,
+     0.8686744574849491
+    ],
+    "model": "M1: SNR=A*c^-p",
+    "n_params": 2,
+    "params": {
+     "A": 29.858463856201485,
+     "p": 1.0428964385184396
+    },
+    "params_ci_2sd": {
+     "A": [
+      12.12300982342784,
+      73.54014199750988
+     ],
+     "p": [
+      0.34408203112257796,
+      1.7417108459143011
+     ]
+    }
+   },
+   "M2": {
+    "theta": [
+     4.679128862479425
+    ],
+    "cov": [
+     [
+      0.015161463726597189
+     ]
+    ],
+    "theta_sd": [
+     0.12313189565095305
+    ],
+    "at_bound": [
+     false
+    ],
+    "wrmse": 0.020093717621676162,
+    "chi2": 4.51322154766191,
+    "chi2_red": 0.9026443095323821,
+    "converged": true,
+    "fit": [
+     0.9979610038444445,
+     0.9791754252073657,
+     0.961484960120099,
+     0.9295880822578667,
+     0.874489650623676,
+     0.8565022203486734
+    ],
+    "model": "M2: SNR=A/(4*lambda^2+c^2), lambda=0.1 pinned",
+    "n_params": 1,
+    "params": {
+     "A": 107.67623089802436,
+     "lambda_pinned": 0.1
+    },
+    "params_ci_2sd": {
+     "A": [
+      84.17223120406327,
+      137.74341649915735
+     ]
+    }
+   },
+   "M_CLIFF": {
+    "nu_x": 4.4547727214752495,
+    "r_top": 0.9221959153586303,
+    "wrmse": 0.04530424220570856,
+    "fit": [
+     0.9221959153586303,
+     0.9221959153586303,
+     0.9221959153586303,
+     0.9221959153586303,
+     0.9221959153586303,
+     0.9221959153586303
+    ],
+    "model": "M-CLIFF: r2=r_top for c<nu_x else 0.05",
+    "n_params": 2,
+    "converged": true,
+    "nu_x_degenerate": true,
+    "nu_x_note": "nu_x UNIDENTIFIED above the last center 4.2426 (no collapse in range; the fit degenerates to a constant r_top and the printed nu_x is an arbitrary point in the degenerate region)"
+   }
+  },
+  "best_smooth": "M1",
+  "residuals": [
+   {
+    "center": 0.42426406871192857,
+    "n": 8,
+    "mean": 0.9864540115271048,
+    "se": 0.0011164847334204243,
+    "fit": 0.9864889856884985,
+    "resid": -3.4974161393752645e-05,
+    "tol_tight": 0.03,
+    "tol_loose": 0.06,
+    "ok_tight": true,
+    "ok_loose": true
+   },
+   {
+    "center": 1.5,
+    "n": 3,
+    "mean": 0.9368246548621476,
+    "se": 0.02875415817496078,
+    "fit": 0.9513675850018505,
+    "resid": -0.01454293013970287,
+    "tol_tight": 0.05750831634992156,
+    "tol_loose": 0.06,
+    "ok_tight": true,
+    "ok_loose": true
+   },
+   {
+    "center": 2.067191451590882,
+    "n": 3,
+    "mean": 0.9396660543456123,
+    "se": 0.009033873972426647,
+    "fit": 0.9333376336124949,
+    "resid": 0.006328420733117457,
+    "tol_tight": 0.03,
+    "tol_loose": 0.06,
+    "ok_tight": true,
+    "ok_loose": true
+   },
+   {
+    "center": 2.8488536650202785,
+    "n": 3,
+    "mean": 0.9073276103516038,
+    "se": 0.037609571686487195,
+    "fit": 0.9092608127042674,
+    "resid": -0.0019332023526635878,
+    "tol_tight": 0.07521914337297439,
+    "tol_loose": 0.07521914337297439,
+    "ok_tight": true,
+    "ok_loose": true
+   },
+   {
+    "center": 3.9260839621088497,
+    "n": 3,
+    "mean": 0.8903053927924329,
+    "se": 0.02382575916502775,
+    "fit": 0.8776281766226686,
+    "resid": 0.01267721616976436,
+    "tol_tight": 0.0476515183300555,
+    "tol_loose": 0.06,
+    "ok_tight": true,
+    "ok_loose": true
+   },
+   {
+    "center": 4.242640687119285,
+    "n": 8,
+    "mean": 0.8600663096799446,
+    "se": 0.016885741715500405,
+    "fit": 0.8686744574849491,
+    "resid": -0.008608147805004518,
+    "tol_tight": 0.03377148343100081,
+    "tol_loose": 0.06,
+    "ok_tight": true,
+    "ok_loose": true
+   }
+  ],
+  "tight_count": 6,
+  "loose_count": 6,
+  "cliff_ratio": 5.267298153881415,
+  "overlap_report": [
+   {
+    "key": "sweep[6]",
+    "center": 5.410644803132983,
+    "n": 3,
+    "mean": 0.8608831908854079,
+    "se": 0.027799143451988136,
+    "extrapolation": 0.8369455863776484,
+    "resid": 0.023937604507759502
+   },
+   {
+    "key": "sweep[7]",
+    "center": 7.456559123087423,
+    "n": 3,
+    "mean": 0.8253015277260424,
+    "se": 0.04116839675693981,
+    "extrapolation": 0.7860354088888011,
+    "resid": 0.03926611883724129
+   },
+   {
+    "key": "sweep[8]",
+    "center": 10.27609018501888,
+    "n": 3,
+    "mean": 0.7584362106893335,
+    "se": 0.06399830855450786,
+    "extrapolation": 0.7244627497479023,
+    "resid": 0.03397346094143128
+   },
+   {
+    "key": "sweep[9]",
+    "center": 14.161763857498666,
+    "n": 3,
+    "mean": 0.6982918325699764,
+    "se": 0.08321961088015285,
+    "extrapolation": 0.6529935152767951,
+    "resid": 0.045298317293181345
+   },
+   {
+    "key": "gate3[SUPRA]",
+    "center": 16.73320053068151,
+    "n": 8,
+    "mean": 0.6650374447295485,
+    "se": 0.044568041140101565,
+    "extrapolation": 0.612591194875226,
+    "resid": 0.05244624985432256
+   }
+  ],
+  "locked_P1": {
+   "model": "M1",
+   "predictions": {
+    "H1": {
+     "c": 3.3,
+     "rho": 4.5,
+     "band": [
+      1.5556349186104046,
+      7.000357133746819
+     ],
+     "kind": "non-overlap INTERPOLATION: in the fit domain (c bracketed by fitted centers 2.85 and 3.93, rho=4.5); the band itself was never swept = out-of-SAMPLE",
+     "pred_r2": 0.8957930748415327,
+     "sigma_pred": 0.02294503196155799
+    },
+    "H2": {
+     "c": 12.0,
+     "rho": 4.5,
+     "band": [
+      5.656854249492381,
+      25.45584412271571
+     ],
+     "kind": "overlap-stratum test: EXTRAPOLATION beyond the fitted c-range [0.42,4.24] and outside the fitted stratum (message overlaps the injection band)",
+     "pred_r2": 0.6910361911386472,
+     "sigma_pred": 0.09807396596629467
+    },
+    "H3": {
+     "c": 4.242640687119285,
+     "rho": 1.5,
+     "band": [
+      3.4641016151377544,
+      5.196152422706631
+     ],
+     "kind": "NARROW band at a swept center (width-dependence discriminant; the fit only saw rho=4.5, and M1/M2 have NO width dependence -- this prediction equals the model value at c=4.2426 regardless of rho; width-INdependence is the claim under test)",
+     "pred_r2": 0.8686744574849491,
+     "sigma_pred": 0.025481056431793058
+    }
+   },
+   "pass_rule": "PREDICTIVE PASS iff |mean_obs - pred_r2| <= max(2*sigma_pred, 0.05) for ALL THREE bands (conjunction), EVALUATED AT STAGE-2 from this formula and the byte-locked full-precision (pred_r2, sigma_pred) -- windows are NOT stored. Any other pattern: report as-is. No threshold moves after data.",
+   "note": "locked at stage-1, before any stage-2 go; no threshold moves after data"
+  },
+  "verdict": "EXPLAINED -- broadband trackability is quantitatively attributed to pointwise square-law demodulation + linear-propagation attenuation: best smooth model M1 (M1: SNR=A*c^-p) fits the 6 non-overlap band-points with residuals within max(2*SE,0.03) on 6/6 and within max(2*SE,0.06) on 6/6; wRMSE_CLIFF/wRMSE_M1 = 5.27 >= 1.5. The Phase-3 line-67 erratum becomes DRAFTABLE (drafting/filing in decade_drive is Jason's separate call and waits for Gate-L consistency). LOCKED P1 predictions emitted (falsifiability payload; stage-2 is a separate go)."
+ },
+ "run_hashes": {
+  "code": "1147740e1697",
+  "spec": "b536a43d66e5"
+ },
+ "reread": "verdict re-rendered; measurement table byte-identical; no number changed"
+}

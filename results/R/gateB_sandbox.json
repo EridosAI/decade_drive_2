@@ -1,0 +1,14 @@
+{
+ "gate": "relay-gateB",
+ "stage": "0-sandbox",
+ "all_pass": true,
+ "framing": "ANALYSIS gate; stage-1 is a RETRODICTION on committed data (no new integrations). Fit r2 vs band center c = sqrt(lo*hi) on NON-OVERLAP band means only; OVERLAP stratum reported, not gating. Falsification weight rests on the LOCKED P1 predictions (stage-2, separate go) and on Gate-L.",
+ "checks": {
+  "check0_inputs": true,
+  "check1_dedupe": true,
+  "check2_recovery": true,
+  "check3_selection": true,
+  "check4_weights": true,
+  "check5_p1": true
+ }
+}
