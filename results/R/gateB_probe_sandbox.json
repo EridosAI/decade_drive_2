@@ -1,0 +1,49 @@
+{
+ "gate": "relay-gateB-probe",
+ "stage": "sandbox",
+ "all_pass": true,
+ "checks": {
+  "c0_collision": true,
+  "c1_locked_P1": true,
+  "c2_pass_rule": true,
+  "c3_nm": true,
+  "c4_protocol": true,
+  "c5_render": true
+ },
+ "collision": {
+  "ok": true,
+  "fresh_bases": [
+   500000,
+   520000,
+   540000,
+   560000
+  ],
+  "committed_bases": [
+   40000,
+   60000,
+   70000,
+   80000,
+   100000,
+   120000,
+   140000,
+   160000,
+   180000,
+   200000,
+   220000,
+   240000,
+   300000,
+   320000,
+   340000,
+   400000,
+   420000,
+   440000,
+   460000
+  ],
+  "collisions": {
+   "fresh_vs_committed": [],
+   "fresh_vs_net_msg": [],
+   "fresh_pairwise": {},
+   "min_fresh_gt_max_committed": true
+  }
+ }
+}

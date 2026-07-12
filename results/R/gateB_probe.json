@@ -1,0 +1,255 @@
+{
+ "gate": "relay-gateB-probe",
+ "stage": "2-probe",
+ "framing": "Gate-B stage-2 probe: reproduce the committed band-sweep protocol (span 1.5, K=0.24, stage-A only, slow-tertile demod) at the three HELD-OUT bands and test the LOCKED P1 predictions. Falsifiable, not retrodictive: pred_r2/sigma_pred were byte-locked at stage-1 (committed) BEFORE any of these runs. Windows are NOT stored -- the pass rule max(2*sigma_pred, 0.05) is evaluated here from the byte-locked (pred, sigma).",
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "<default>",
+  "CUDA_VISIBLE_DEVICES": "<unset>"
+ },
+ "protocol_identity_ref": 0.9814697252519144,
+ "pchecks": {
+  "ok": true,
+  "reasons": [],
+  "gateB_sha256": "f2655b84a0c6dd3d72c4af8adc3b496e7d8ff92347c51c084c55555c09831d48",
+  "model": "M1",
+  "pass_rule": "PREDICTIVE PASS iff |mean_obs - pred_r2| <= max(2*sigma_pred, 0.05) for ALL THREE bands (conjunction), EVALUATED AT STAGE-2 from this formula and the byte-locked full-precision (pred_r2, sigma_pred) -- windows are NOT stored. Any other pattern: report as-is. No threshold moves after data."
+ },
+ "achecks": {
+  "ok": true,
+  "reasons": [],
+  "sweep_sha256": "881c44bee77620fc45218e1c4b34975b7cd8f60d4cd6925b8583e33c3eb6d10e",
+  "anchor_ref": 0.9814697252519144,
+  "anchor_band": [
+   0.2,
+   0.9
+  ]
+ },
+ "collision": {
+  "ok": true,
+  "fresh_bases": [
+   500000,
+   520000,
+   540000,
+   560000
+  ],
+  "committed_bases": [
+   40000,
+   60000,
+   70000,
+   80000,
+   100000,
+   120000,
+   140000,
+   160000,
+   180000,
+   200000,
+   220000,
+   240000,
+   300000,
+   320000,
+   340000,
+   400000,
+   420000,
+   440000,
+   460000
+  ],
+  "collisions": {
+   "fresh_vs_committed": [],
+   "fresh_vs_net_msg": [],
+   "fresh_pairwise": {},
+   "min_fresh_gt_max_committed": true
+  }
+ },
+ "seed_scheme": {
+  "build/enc/msg": "== relay_gate0._stage_a_r2 (build seed, enc 5000+seed, msg 1000+seed)",
+  "fresh_decoy_bases": {
+   "H1": 500000,
+   "H2": 520000,
+   "H3": 540000,
+   "anchor": 560000
+  }
+ },
+ "hashes": {
+  "code": "14012364ea73"
+ },
+ "wall_clock_s": 97.91243522998411,
+ "verdict": {
+  "framing": "Gate-B stage-2 probe: reproduce the committed band-sweep protocol (span 1.5, K=0.24, stage-A only, slow-tertile demod) at the three HELD-OUT bands and test the LOCKED P1 predictions. Falsifiable, not retrodictive: pred_r2/sigma_pred were byte-locked at stage-1 (committed) BEFORE any of these runs. Windows are NOT stored -- the pass rule max(2*sigma_pred, 0.05) is evaluated here from the byte-locked (pred, sigma).",
+  "protocol": "span 1.5, K=0.24, stage-A slow-demod (== sweep)",
+  "seeds": [
+   0,
+   1
+  ],
+  "pass_rule": "PREDICTIVE PASS iff |mean_obs - pred_r2| <= max(2*sigma_pred, 0.05) for ALL THREE (conjunction); windows evaluated here from byte-locked (pred, sigma), NOT stored",
+  "anchor": {
+   "r2": 0.9814697252519144,
+   "ref": 0.9814697252519144,
+   "diff": 0.0,
+   "digit6_ok": true,
+   "bit_ok": true,
+   "decoy_p95": -0.18466915381372095
+  },
+  "holdouts": {
+   "H1": {
+    "band": [
+     1.5556349186104046,
+     7.000357133746819
+    ],
+    "kind": "non-overlap INTERPOLATION: in the fit domain (c bracketed by fitted centers 2.85 and 3.93, rho=4.5); the band itself was never swept = out-of-SAMPLE",
+    "mean_obs": 0.902693280528116,
+    "per_seed_r2": [
+     0.8877178465255318,
+     0.9176687145307003
+    ],
+    "se": 0.014975434002584274,
+    "pred_r2": 0.8957930748415327,
+    "sigma_pred": 0.02294503196155799,
+    "window": 0.05,
+    "deviation": 0.006900205686583338,
+    "pass": true,
+    "decoy_p95_max": -0.058272257928853405
+   },
+   "H2": {
+    "band": [
+     5.656854249492381,
+     25.45584412271571
+    ],
+    "kind": "overlap-stratum test: EXTRAPOLATION beyond the fitted c-range [0.42,4.24] and outside the fitted stratum (message overlaps the injection band)",
+    "mean_obs": 0.7115881227041359,
+    "per_seed_r2": [
+     0.6043137333465856,
+     0.818862512061686
+    ],
+    "se": 0.10727438935755022,
+    "pred_r2": 0.6910361911386472,
+    "sigma_pred": 0.09807396596629467,
+    "window": 0.19614793193258934,
+    "deviation": 0.020551931565488624,
+    "pass": true,
+    "decoy_p95_max": -0.041127183911348564
+   },
+   "H3": {
+    "band": [
+     3.4641016151377544,
+     5.196152422706631
+    ],
+    "kind": "NARROW band at a swept center (width-dependence discriminant; the fit only saw rho=4.5, and M1/M2 have NO width dependence -- this prediction equals the model value at c=4.2426 regardless of rho; width-INdependence is the claim under test)",
+    "mean_obs": 0.9089091996790846,
+    "per_seed_r2": [
+     0.8771315908370549,
+     0.9406868085211142
+    ],
+    "se": 0.031777608842029625,
+    "pred_r2": 0.8686744574849491,
+    "sigma_pred": 0.025481056431793058,
+    "window": 0.050962112863586116,
+    "deviation": 0.040234742194135475,
+    "pass": true,
+    "decoy_p95_max": -0.042415091821783026
+   }
+  },
+  "decoys": {
+   "max_p95": -0.041127183911348564,
+   "elevated": false,
+   "bar": 0.2
+  },
+  "collision_free": true,
+  "verdict": "PREDICTIVE PASS -- all three held-out bands land within max(2*sigma_pred, 0.05) of the locked M1 prediction. The stage-1 attenuation explanation (smooth M1 power law) is CORROBORATED out-of-sample; the Phase-3 line-67 erratum path stays open pending Gate-L."
+ },
+ "holdout_recs": {
+  "H1": [
+   {
+    "seed": 0,
+    "band": [
+     1.5556349186104046,
+     7.000357133746819
+    ],
+    "r2_d0": 0.8877178465255318,
+    "lam": 0.01,
+    "decoy_p95": -0.07332614624879466,
+    "decoy_mean": -0.19445576480372806
+   },
+   {
+    "seed": 1,
+    "band": [
+     1.5556349186104046,
+     7.000357133746819
+    ],
+    "r2_d0": 0.9176687145307003,
+    "lam": 0.01,
+    "decoy_p95": -0.058272257928853405,
+    "decoy_mean": -0.16530070996366142
+   }
+  ],
+  "H2": [
+   {
+    "seed": 0,
+    "band": [
+     5.656854249492381,
+     25.45584412271571
+    ],
+    "r2_d0": 0.6043137333465856,
+    "lam": 0.01,
+    "decoy_p95": -0.041127183911348564,
+    "decoy_mean": -0.1054198951726217
+   },
+   {
+    "seed": 1,
+    "band": [
+     5.656854249492381,
+     25.45584412271571
+    ],
+    "r2_d0": 0.818862512061686,
+    "lam": 0.01,
+    "decoy_p95": -0.05567090651657874,
+    "decoy_mean": -0.10694449439039835
+   }
+  ],
+  "H3": [
+   {
+    "seed": 0,
+    "band": [
+     3.4641016151377544,
+     5.196152422706631
+    ],
+    "r2_d0": 0.8771315908370549,
+    "lam": 0.001,
+    "decoy_p95": -0.049309121169079165,
+    "decoy_mean": -0.1920210157616249
+   },
+   {
+    "seed": 1,
+    "band": [
+     3.4641016151377544,
+     5.196152422706631
+    ],
+    "r2_d0": 0.9406868085211142,
+    "lam": 0.01,
+    "decoy_p95": -0.042415091821783026,
+    "decoy_mean": -0.1657667504885025
+   }
+  ]
+ },
+ "anchor_rec": {
+  "seed": 0,
+  "band": [
+   0.2,
+   0.9
+  ],
+  "r2_d0": 0.9814697252519144,
+  "lam": 0.0001,
+  "decoy_p95": -0.18466915381372095,
+  "decoy_mean": -0.5725993266930313
+ },
+ "run_hashes": {
+  "code": "b964e2fa8bcd"
+ },
+ "reread": "re-rendered from unchanged recs; no GPU; LOCKED-NUMBERS byte-identical. Code differs from the run sha only in render/_write_md, the --reread mode, and the c5_render sandbox test; the numeric path is unchanged."
+}
