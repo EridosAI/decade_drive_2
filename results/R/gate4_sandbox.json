@@ -1,0 +1,318 @@
+{
+ "gate": "relay-gate4",
+ "stage": "1-cpu-sandbox",
+ "all_pass": true,
+ "framing": "Matched total span S = H*s: (1 x 3.0), (2 x 1.5), (3 x 1.0) all carry the message a compound span of 3 decades along the INFORMATION PATH (H successive square-law demodulations end-to-end), NOT one physical spectrum; each repeater re-injects into a fresh span-s network. K per span = K*(s) argmax of the committed Phase-1 landscape (each hop tuned as well as the committed data allows -- the architect's question). This gate prices the hop-length trade (short vs long) for the |z|^2 channel Gate-3 pinned.",
+ "configs": [
+  "1x3.0",
+  "2x1.5",
+  "3x1.0",
+  "1x2.0",
+  "2x1.0"
+ ],
+ "checks": {
+  "check0_seed_scheme": {
+   "pass": true,
+   "report": {
+    "ok": true,
+    "seed_max": 9,
+    "max_stages": 3,
+    "families": {
+     "build": [
+      0,
+      209
+     ],
+     "enc": [
+      5000,
+      5209
+     ],
+     "rep": [
+      9000,
+      9209
+     ],
+     "carrier_arg": [
+      2000,
+      2109
+     ],
+     "carrier_rademacher": [
+      1777,
+      2886
+     ],
+     "msg": [
+      1000,
+      1009
+     ],
+     "g4_decoy_bases": {
+      "1": 400000,
+      "2": 420000,
+      "3": 440000
+     },
+     "e2e_decoy_base": 460000,
+     "committed_decoy_bases": [
+      40000,
+      60000,
+      70000,
+      80000,
+      100000,
+      120000,
+      140000,
+      160000,
+      180000,
+      200000,
+      220000,
+      240000,
+      300000,
+      320000,
+      340000
+     ],
+     "N_DEC": 60
+    },
+    "collisions": {
+     "net_drive_vs_g4_decoy": [],
+     "net_drive_vs_msg": [],
+     "msg_vs_g4_decoy": [],
+     "g4_decoy_vs_committed": [],
+     "g4_decoy_pairwise_overlaps": {},
+     "min_g4_base_gt_max_committed": true
+    }
+   }
+  },
+  "check1_kstar": {
+   "pass": true,
+   "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+   "k_star": {
+    "K_star": {
+     "1.0": 0.24,
+     "1.5": 0.24,
+     "2.0": 0.24,
+     "3.0": 0.24
+    },
+    "dual_arm_1p5": false,
+    "all_anchor_coupling": true,
+    "noise_argmax_spans": [
+     "3.0"
+    ],
+    "at_grid_max_all": true,
+    "grid_max": 0.24,
+    "monotone_to_edge_spans": [
+     "1.0",
+     "1.5",
+     "2.0"
+    ],
+    "detail": {
+     "1.0": {
+      "K_star": 0.24,
+      "table": {
+       "0.0": -1.0198617826553125,
+       "0.08": 0.8909668275012322,
+       "0.12": 0.98320800625887,
+       "0.16": 0.9977206201925816,
+       "0.24": 0.9999458660176345
+      },
+      "esp_ok": {
+       "0.0": 0,
+       "0.08": 8,
+       "0.12": 8,
+       "0.16": 10,
+       "0.24": 10
+      },
+      "argmax_margin": 0.0022252458250529017,
+      "noise_flag": false,
+      "at_grid_max": true,
+      "monotone_routing": true,
+      "n_seeds": 10
+     },
+     "1.5": {
+      "K_star": 0.24,
+      "table": {
+       "0.0": -1.7061782819371214,
+       "0.08": 0.7335830304811412,
+       "0.12": 0.8757319324160833,
+       "0.16": 0.9422569933045702,
+       "0.24": 0.9860724336299705
+      },
+      "esp_ok": {
+       "0.0": 0,
+       "0.08": 3,
+       "0.12": 8,
+       "0.16": 8,
+       "0.24": 10
+      },
+      "argmax_margin": 0.0438154403254003,
+      "noise_flag": false,
+      "at_grid_max": true,
+      "monotone_routing": true,
+      "n_seeds": 10
+     },
+     "2.0": {
+      "K_star": 0.24,
+      "table": {
+       "0.0": -4.671754876896957,
+       "0.08": 0.4087962618552076,
+       "0.12": 0.5349840641223634,
+       "0.16": 0.6087130006083135,
+       "0.24": 0.7447639185592246
+      },
+      "esp_ok": {
+       "0.0": 0,
+       "0.08": 1,
+       "0.12": 3,
+       "0.16": 8,
+       "0.24": 8
+      },
+      "argmax_margin": 0.13605091795091118,
+      "noise_flag": false,
+      "at_grid_max": true,
+      "monotone_routing": true,
+      "n_seeds": 10
+     },
+     "3.0": {
+      "K_star": 0.24,
+      "table": {
+       "0.0": -27.219375100940756,
+       "0.08": -0.006405314217193337,
+       "0.12": -0.007506235400602646,
+       "0.16": -0.004706632462879545,
+       "0.24": -0.0035911695324275404
+      },
+      "esp_ok": {
+       "0.0": 0,
+       "0.08": 0,
+       "0.12": 1,
+       "0.16": 3,
+       "0.24": 8
+      },
+      "argmax_margin": 0.0011154629304520047,
+      "noise_flag": true,
+      "at_grid_max": true,
+      "monotone_routing": false,
+      "n_seeds": 10
+     }
+    }
+   }
+  },
+  "check2_wiring": {
+   "pass": true,
+   "detail": {
+    "1x3.0": {
+     "H": 1,
+     "n_hops": 1,
+     "n_reps": 0,
+     "r2_cum": [
+      1.0
+     ],
+     "ok": true
+    },
+    "2x1.5": {
+     "H": 2,
+     "n_hops": 2,
+     "n_reps": 1,
+     "r2_cum": [
+      1.0,
+      0.9979
+     ],
+     "ok": true
+    },
+    "3x1.0": {
+     "H": 3,
+     "n_hops": 3,
+     "n_reps": 2,
+     "r2_cum": [
+      1.0,
+      0.9969,
+      0.9969
+     ],
+     "ok": true
+    },
+    "1x2.0": {
+     "H": 1,
+     "n_hops": 1,
+     "n_reps": 0,
+     "r2_cum": [
+      1.0
+     ],
+     "ok": true
+    },
+    "2x1.0": {
+     "H": 2,
+     "n_hops": 2,
+     "n_reps": 1,
+     "r2_cum": [
+      1.0,
+      0.9969
+     ],
+     "ok": true
+    }
+   }
+  },
+  "check3_schema": {
+   "pass": true
+  },
+  "check4_replay_feasibility": {
+   "pass": true,
+   "disposition": "FEASIBLE",
+   "seeds_match": true,
+   "funcs_shared": true,
+   "span_k_match": true,
+   "got": {
+    "1": {
+     "build": 0,
+     "enc": 5000,
+     "rep": 9000,
+     "carrier": null
+    },
+    "2": {
+     "build": 100,
+     "enc": 5100,
+     "rep": 9100,
+     "carrier": 2000
+    }
+   },
+   "want": {
+    "1": {
+     "build": 0,
+     "enc": 5000,
+     "rep": 9000,
+     "carrier": null
+    },
+    "2": {
+     "build": 100,
+     "enc": 5100,
+     "rep": 9100,
+     "carrier": 2000
+    }
+   }
+  },
+  "check5_classifier": {
+   "pass": true
+  },
+  "check6_esp_pairing": {
+   "pass": true,
+   "symmetric": [
+    0,
+    3
+   ],
+   "per_config": {
+    "3x1.0": [
+     0,
+     1,
+     3
+    ],
+    "2x1.5": [
+     0,
+     2,
+     3
+    ]
+   }
+  },
+  "check7_anchor_source": {
+   "pass": true
+  },
+  "check8_amend_path": {
+   "pass": true
+  },
+  "check9_decoy": {
+   "pass": true
+  }
+ }
+}

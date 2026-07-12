@@ -1,0 +1,3732 @@
+{
+ "gate": "relay-gate4",
+ "stage": "3-battery",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "framing": "Matched total span S = H*s: (1 x 3.0), (2 x 1.5), (3 x 1.0) all carry the message a compound span of 3 decades along the INFORMATION PATH (H successive square-law demodulations end-to-end), NOT one physical spectrum; each repeater re-injects into a fresh span-s network. K per span = K*(s) argmax of the committed Phase-1 landscape (each hop tuned as well as the committed data allows -- the architect's question). This gate prices the hop-length trade (short vs long) for the |z|^2 channel Gate-3 pinned.",
+ "k_star": {
+  "K_star": {
+   "1.0": 0.24,
+   "1.5": 0.24,
+   "2.0": 0.24,
+   "3.0": 0.24
+  },
+  "dual_arm_1p5": false,
+  "all_anchor_coupling": true,
+  "noise_argmax_spans": [
+   "3.0"
+  ],
+  "at_grid_max_all": true,
+  "grid_max": 0.24,
+  "monotone_to_edge_spans": [
+   "1.0",
+   "1.5",
+   "2.0"
+  ],
+  "detail": {
+   "1.0": {
+    "K_star": 0.24,
+    "table": {
+     "0.0": -1.0198617826553125,
+     "0.08": 0.8909668275012322,
+     "0.12": 0.98320800625887,
+     "0.16": 0.9977206201925816,
+     "0.24": 0.9999458660176345
+    },
+    "esp_ok": {
+     "0.0": 0,
+     "0.08": 8,
+     "0.12": 8,
+     "0.16": 10,
+     "0.24": 10
+    },
+    "argmax_margin": 0.0022252458250529017,
+    "noise_flag": false,
+    "at_grid_max": true,
+    "monotone_routing": true,
+    "n_seeds": 10
+   },
+   "1.5": {
+    "K_star": 0.24,
+    "table": {
+     "0.0": -1.7061782819371214,
+     "0.08": 0.7335830304811412,
+     "0.12": 0.8757319324160833,
+     "0.16": 0.9422569933045702,
+     "0.24": 0.9860724336299705
+    },
+    "esp_ok": {
+     "0.0": 0,
+     "0.08": 3,
+     "0.12": 8,
+     "0.16": 8,
+     "0.24": 10
+    },
+    "argmax_margin": 0.0438154403254003,
+    "noise_flag": false,
+    "at_grid_max": true,
+    "monotone_routing": true,
+    "n_seeds": 10
+   },
+   "2.0": {
+    "K_star": 0.24,
+    "table": {
+     "0.0": -4.671754876896957,
+     "0.08": 0.4087962618552076,
+     "0.12": 0.5349840641223634,
+     "0.16": 0.6087130006083135,
+     "0.24": 0.7447639185592246
+    },
+    "esp_ok": {
+     "0.0": 0,
+     "0.08": 1,
+     "0.12": 3,
+     "0.16": 8,
+     "0.24": 8
+    },
+    "argmax_margin": 0.13605091795091118,
+    "noise_flag": false,
+    "at_grid_max": true,
+    "monotone_routing": true,
+    "n_seeds": 10
+   },
+   "3.0": {
+    "K_star": 0.24,
+    "table": {
+     "0.0": -27.219375100940756,
+     "0.08": -0.006405314217193337,
+     "0.12": -0.007506235400602646,
+     "0.16": -0.004706632462879545,
+     "0.24": -0.0035911695324275404
+    },
+    "esp_ok": {
+     "0.0": 0,
+     "0.08": 0,
+     "0.12": 1,
+     "0.16": 3,
+     "0.24": 8
+    },
+    "argmax_margin": 0.0011154629304520047,
+    "noise_flag": true,
+    "at_grid_max": true,
+    "monotone_routing": false,
+    "n_seeds": 10
+   }
+  }
+ },
+ "seed_scheme": {
+  "ok": true,
+  "seed_max": 9,
+  "max_stages": 3,
+  "families": {
+   "build": [
+    0,
+    209
+   ],
+   "enc": [
+    5000,
+    5209
+   ],
+   "rep": [
+    9000,
+    9209
+   ],
+   "carrier_arg": [
+    2000,
+    2109
+   ],
+   "carrier_rademacher": [
+    1777,
+    2886
+   ],
+   "msg": [
+    1000,
+    1009
+   ],
+   "g4_decoy_bases": {
+    "1": 400000,
+    "2": 420000,
+    "3": 440000
+   },
+   "e2e_decoy_base": 460000,
+   "committed_decoy_bases": [
+    40000,
+    60000,
+    70000,
+    80000,
+    100000,
+    120000,
+    140000,
+    160000,
+    180000,
+    200000,
+    220000,
+    240000,
+    300000,
+    320000,
+    340000
+   ],
+   "N_DEC": 60
+  },
+  "collisions": {
+   "net_drive_vs_g4_decoy": [],
+   "net_drive_vs_msg": [],
+   "msg_vs_g4_decoy": [],
+   "g4_decoy_vs_committed": [],
+   "g4_decoy_pairwise_overlaps": {},
+   "min_g4_base_gt_max_committed": true
+  }
+ },
+ "hashes": {
+  "code": "1b9d419c2720",
+  "spec": "f8445bdba331"
+ },
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "gpu",
+  "device": "gpu:NVIDIA GeForce RTX 4080 SUPER",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "<default>",
+  "CUDA_VISIBLE_DEVICES": "<unset>"
+ },
+ "wall_clock_s": 845.1443713310291,
+ "verdict": {
+  "framing": "Matched total span S = H*s: (1 x 3.0), (2 x 1.5), (3 x 1.0) all carry the message a compound span of 3 decades along the INFORMATION PATH (H successive square-law demodulations end-to-end), NOT one physical spectrum; each repeater re-injects into a fresh span-s network. K per span = K*(s) argmax of the committed Phase-1 landscape (each hop tuned as well as the committed data allows -- the architect's question). This gate prices the hop-length trade (short vs long) for the |z|^2 channel Gate-3 pinned.",
+  "k_star": {
+   "K_star": {
+    "1.0": 0.24,
+    "1.5": 0.24,
+    "2.0": 0.24,
+    "3.0": 0.24
+   },
+   "dual_arm_1p5": false,
+   "all_anchor_coupling": true,
+   "noise_argmax_spans": [
+    "3.0"
+   ],
+   "at_grid_max_all": true,
+   "grid_max": 0.24,
+   "monotone_to_edge_spans": [
+    "1.0",
+    "1.5",
+    "2.0"
+   ],
+   "detail": {
+    "1.0": {
+     "K_star": 0.24,
+     "table": {
+      "0.0": -1.0198617826553125,
+      "0.08": 0.8909668275012322,
+      "0.12": 0.98320800625887,
+      "0.16": 0.9977206201925816,
+      "0.24": 0.9999458660176345
+     },
+     "esp_ok": {
+      "0.0": 0,
+      "0.08": 8,
+      "0.12": 8,
+      "0.16": 10,
+      "0.24": 10
+     },
+     "argmax_margin": 0.0022252458250529017,
+     "noise_flag": false,
+     "at_grid_max": true,
+     "monotone_routing": true,
+     "n_seeds": 10
+    },
+    "1.5": {
+     "K_star": 0.24,
+     "table": {
+      "0.0": -1.7061782819371214,
+      "0.08": 0.7335830304811412,
+      "0.12": 0.8757319324160833,
+      "0.16": 0.9422569933045702,
+      "0.24": 0.9860724336299705
+     },
+     "esp_ok": {
+      "0.0": 0,
+      "0.08": 3,
+      "0.12": 8,
+      "0.16": 8,
+      "0.24": 10
+     },
+     "argmax_margin": 0.0438154403254003,
+     "noise_flag": false,
+     "at_grid_max": true,
+     "monotone_routing": true,
+     "n_seeds": 10
+    },
+    "2.0": {
+     "K_star": 0.24,
+     "table": {
+      "0.0": -4.671754876896957,
+      "0.08": 0.4087962618552076,
+      "0.12": 0.5349840641223634,
+      "0.16": 0.6087130006083135,
+      "0.24": 0.7447639185592246
+     },
+     "esp_ok": {
+      "0.0": 0,
+      "0.08": 1,
+      "0.12": 3,
+      "0.16": 8,
+      "0.24": 8
+     },
+     "argmax_margin": 0.13605091795091118,
+     "noise_flag": false,
+     "at_grid_max": true,
+     "monotone_routing": true,
+     "n_seeds": 10
+    },
+    "3.0": {
+     "K_star": 0.24,
+     "table": {
+      "0.0": -27.219375100940756,
+      "0.08": -0.006405314217193337,
+      "0.12": -0.007506235400602646,
+      "0.16": -0.004706632462879545,
+      "0.24": -0.0035911695324275404
+     },
+     "esp_ok": {
+      "0.0": 0,
+      "0.08": 0,
+      "0.12": 1,
+      "0.16": 3,
+      "0.24": 8
+     },
+     "argmax_margin": 0.0011154629304520047,
+     "noise_flag": true,
+     "at_grid_max": true,
+     "monotone_routing": false,
+     "n_seeds": 10
+    }
+   }
+  },
+  "operationalization": {
+   "contrast": "D = e2e(minuend) - e2e(subtrahend), per-seed paired (symmetric ESP intersection)",
+   "delta": "max(2*SE_paired, 0.02) EVALUATED AT VERDICT (never stored)",
+   "underpowered": "paired n in [2,4] -> -UNDERPOWERED (symmetric); full-strength needs n >= 5; n < 2 -> NM",
+   "K_rule": "K*(s) = argmax_K mean_{seed 0..9} demod.r2_d0 (raw; committed landscape)",
+   "accounting": "S_total = H * s (compound-span information path)"
+  },
+  "per_config_intersection": {
+   "1x3.0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "2x1.5": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "3x1.0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "1x2.0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "2x1.0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "anchors": {
+   "1x3.0": {
+    "span": 3.0,
+    "K": 0.24,
+    "sourced": true,
+    "digit_exact_6dp": true,
+    "bit_exact": true,
+    "n_cells": 8,
+    "bridge": "smoke seed-0 diff 0.0e+00 (identity: value == committed cell)"
+   },
+   "2x1.5": {
+    "span": 1.5,
+    "K": 0.24,
+    "sourced": false,
+    "digit_exact_6dp": true,
+    "bit_exact": true,
+    "max_abs_diff": 0.0,
+    "per_seed": {
+     "0": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "1": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "2": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "3": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "4": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "5": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "6": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "7": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     }
+    },
+    "n_cells": 8
+   },
+   "3x1.0": {
+    "span": 1.0,
+    "K": 0.24,
+    "sourced": false,
+    "digit_exact_6dp": true,
+    "bit_exact": true,
+    "max_abs_diff": 0.0,
+    "per_seed": {
+     "0": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "1": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "2": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "3": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "4": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "5": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "6": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "7": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     }
+    },
+    "n_cells": 8
+   },
+   "1x2.0": {
+    "span": 2.0,
+    "K": 0.24,
+    "sourced": false,
+    "digit_exact_6dp": true,
+    "bit_exact": false,
+    "max_abs_diff": 3.3306690738754696e-16,
+    "per_seed": {
+     "0": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "1": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "2": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "3": {
+      "diff": 3.3306690738754696e-16,
+      "ulp": 3,
+      "digit6_ok": true
+     },
+     "4": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "5": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "6": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "7": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     }
+    },
+    "n_cells": 8
+   },
+   "2x1.0": {
+    "span": 1.0,
+    "K": 0.24,
+    "sourced": false,
+    "digit_exact_6dp": true,
+    "bit_exact": true,
+    "max_abs_diff": 0.0,
+    "per_seed": {
+     "0": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "1": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "2": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "3": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "4": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "5": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "6": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     },
+     "7": {
+      "diff": 0.0,
+      "ulp": 0,
+      "digit6_ok": true
+     }
+    },
+    "n_cells": 8
+   }
+  },
+  "anchor_ok": true,
+  "anchor_diagnostic": {
+   "gate": "digit-exact 6dp (ratified 'digit-exact'; house standard)",
+   "bit_exact_cells": 39,
+   "total_cells": 40,
+   "ulp_cells": [
+    {
+     "config": "1x2.0",
+     "seed": 3,
+     "diff": 3.3306690738754696e-16,
+     "ulp": 3,
+     "digit6_ok": true
+    }
+   ],
+   "note": "bit-exact is diagnostic only; ULP-level diffs = FP reduction-order (span-2.0 batch), never gated (ratified NM-resolution 2026-07-11)."
+  },
+  "decoys": {
+   "stage_p95_mean": {
+    "2x1.5": {
+     "1": -0.031358911826217084,
+     "2": -0.022776665345502982
+    },
+    "3x1.0": {
+     "1": -0.3286229472730786,
+     "2": -0.3052824121560441,
+     "3": -0.3427797412915192
+    },
+    "1x2.0": {
+     "1": 0.015903135890172584
+    },
+    "2x1.0": {
+     "1": -0.3286229472730786,
+     "2": -0.3052824121560441
+    }
+   },
+   "e2e_p95_mean": {
+    "2x1.5": -0.42949335741277905,
+    "3x1.0": -0.4771162949730888,
+    "1x2.0": -0.36613768248191586,
+    "2x1.0": -0.4769155710103895
+   },
+   "sourced_committed_p95": {
+    "1x3.0": {
+     "committed_decoy_p95_base40000": {
+      "1": 0.03199352511405944
+     }
+    }
+   },
+   "max_p95": 0.015903135890172584,
+   "elevated": false,
+   "note": "leak gate over GPU-run configs only; sourced rows cite committed decoy_p95 (base-40000)"
+  },
+  "replay": {
+   "arm": "2x1.5",
+   "gate1_json": "results/R/gate1_multihop.json",
+   "per_seed": {
+    "0": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "1": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "2": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "3": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "4": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "5": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "6": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    },
+    "7": {
+     "hop1_diff": 0.0,
+     "hop2_diff": 0.0
+    }
+   },
+   "bit_exact": true,
+   "n_seeds": 8
+  },
+  "replay_ok": true,
+  "pricing_table": {
+   "1x3.0": {
+    "e2e_mean": -0.001713587874739107,
+    "e2e_se": 0.006440851685198197,
+    "n": 7,
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "role": "primary",
+    "sourced_from_committed": true
+   },
+   "2x1.5": {
+    "e2e_mean": 0.9283676088965858,
+    "e2e_se": 0.02029015247137157,
+    "n": 8,
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "role": "primary",
+    "sourced_from_committed": false
+   },
+   "3x1.0": {
+    "e2e_mean": 0.9847397731136263,
+    "e2e_se": 0.004941162395270364,
+    "n": 8,
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "role": "primary",
+    "sourced_from_committed": false
+   },
+   "1x2.0": {
+    "e2e_mean": 0.7569713876347137,
+    "e2e_se": 0.018882112106153686,
+    "n": 7,
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "role": "secondary",
+    "sourced_from_committed": false
+   },
+   "2x1.0": {
+    "e2e_mean": 0.9847823553277812,
+    "e2e_se": 0.004930721256583533,
+    "n": 8,
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "role": "secondary",
+    "sourced_from_committed": false
+   }
+  },
+  "contrasts": {
+   "PRIMARY (short-vs-long @ S=3.0)": {
+    "minuend": "3x1.0",
+    "subtrahend": "2x1.5",
+    "symmetric_intersection": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "n_paired": 8,
+    "per_seed_D": {
+     "0": 0.01865803714321923,
+     "1": 0.09869160922169418,
+     "2": 0.02223586297205682,
+     "3": 0.04739747661356597,
+     "4": 0.1797753083447744,
+     "5": 0.012354621292278156,
+     "6": 0.038275226287618036,
+     "7": 0.03358917186111676
+    },
+    "D_mean": 0.056372164217040444,
+    "se_paired": 0.020031924010530527,
+    "classification": {
+     "verdict": "SHORT-WINS",
+     "base": "SHORT-WINS",
+     "underpowered": false,
+     "delta": 0.040063848021061055,
+     "D_mean": 0.056372164217040444,
+     "se_paired": 0.020031924010530527,
+     "n_paired": 8,
+     "delta_rule": "max(2*SE_paired, 0.02) evaluated at verdict (NOT stored); full-strength requires n >= 5"
+    },
+    "gating": true
+   },
+   "SECONDARY (@ S=2.0, consistency-only)": {
+    "minuend": "2x1.0",
+    "subtrahend": "1x2.0",
+    "symmetric_intersection": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "n_paired": 7,
+    "per_seed_D": {
+     "0": 0.21202191981009155,
+     "1": 0.23577160733430091,
+     "2": 0.1753697807952892,
+     "3": 0.3171684755530122,
+     "4": 0.22227926994014013,
+     "5": 0.24884498797549748,
+     "6": 0.1918982700357006
+    },
+    "D_mean": 0.22905061592057602,
+    "se_paired": 0.017457091995151306,
+    "classification": {
+     "verdict": "SHORT-WINS",
+     "base": "SHORT-WINS",
+     "underpowered": false,
+     "delta": 0.03491418399030261,
+     "D_mean": 0.22905061592057602,
+     "se_paired": 0.017457091995151306,
+     "n_paired": 7,
+     "delta_rule": "max(2*SE_paired, 0.02) evaluated at verdict (NOT stored); full-strength requires n >= 5"
+    },
+    "gating": false
+   }
+  },
+  "decomposition": {
+   "2x1.5": {
+    "n": 8,
+    "insertion_rho2": {
+     "mean": 0.9411994007639677,
+     "sd": 0.05946709303405655,
+     "se": 0.021024792370916343,
+     "n": 8,
+     "per_seed": [
+      0.9805026965060617,
+      0.9092546986254737,
+      0.9820222022200193,
+      0.9647063435885105,
+      0.8054449656621979,
+      0.9597466427804309,
+      0.9729255897987327,
+      0.9549920669303147
+     ]
+    },
+    "per_hop_rho": {
+     "2": 0.9411994007639677
+    },
+    "slope": null
+   },
+   "3x1.0": {
+    "n": 8,
+    "insertion_rho2": {
+     "mean": 0.9848323295694211,
+     "sd": 0.013949065935174856,
+     "se": 0.004931739556990205,
+     "n": 8,
+     "per_seed": [
+      0.9809254010576758,
+      0.996870868984297,
+      0.9945064013153255,
+      0.9951453742072718,
+      0.9775625066860919,
+      0.958737739734446,
+      0.9987326156240951,
+      0.9761777289461662
+     ]
+    },
+    "per_hop_rho": {
+     "2": 0.9848323295694211,
+     "3": 0.999956397996125
+    },
+    "slope": {
+     "mean": 0.015124068426704114,
+     "sd": 0.013920713277176465,
+     "se": 0.004921715378622542,
+     "n": 8,
+     "per_seed": [
+      0.019209981013855293,
+      0.0031314870599964606,
+      0.005487120977402807,
+      0.004868200351570017,
+      0.022128829048883993,
+      0.04130946656521117,
+      0.0012783478237769674,
+      0.0235791145729362
+     ]
+    }
+   },
+   "2x1.0": {
+    "n": 8,
+    "insertion_rho2": {
+     "mean": 0.9848323295694211,
+     "sd": 0.013949065935174856,
+     "se": 0.004931739556990205,
+     "n": 8,
+     "per_seed": [
+      0.9809254010576758,
+      0.996870868984297,
+      0.9945064013153255,
+      0.9951453742072718,
+      0.9775625066860919,
+      0.958737739734446,
+      0.9987326156240951,
+      0.9761777289461662
+     ]
+    },
+    "per_hop_rho": {
+     "2": 0.9848323295694211
+    },
+    "slope": null
+   }
+  },
+  "verdict": "SHORT-WINS (primary short-vs-long @ S=3.0): D = e2e(3 x 1.0) - e2e(2 x 1.5) = +0.0564 +/- 0.0200 (paired n=8); delta = max(2*SE,0.02) = 0.0401. SHORT hops win. [SCOPED: K<=0.24, AT-CEILING right-censored -- see verdict scope]",
+  "gradient_facts": {
+   "1.0": {
+    "r2_ceiling": 0.9999458660176345,
+    "headroom": 5.413398236553402e-05,
+    "last_step": 0.0022252458250529017,
+    "slope": 0.02781557281316127
+   },
+   "1.5": {
+    "r2_ceiling": 0.9860724336299705,
+    "headroom": 0.013927566370029454,
+    "last_step": 0.0438154403254003,
+    "slope": 0.5476930040675038
+   },
+   "2.0": {
+    "r2_ceiling": 0.7447639185592246,
+    "headroom": 0.25523608144077536,
+    "last_step": 0.13605091795091118,
+    "slope": 1.7006364743863898
+   },
+   "gap_by_K": {
+    "0.08": 0.1573837970200911,
+    "0.12": 0.10747607384278668,
+    "0.16": 0.05546362688801132,
+    "0.24": 0.01387343238766392
+   }
+  },
+  "protocol_scope": "[ARCHITECTURE-CONDITIONAL.] This trade prices the relay AS BUILT: an OFFLINE DECODE-AND-FORWARD chain in which each hop ridge-decodes the |z|^2 channel (Gate-3-pinned) to the message estimate and RE-MODULATES it into a fresh span-s network, with the per-hop insertion cost from Gate-1's re-injection plateau (insertion rho_2 ~ 0.985 span-1.0, ~0.941 span-1.5, from the committed decomposition). Compound span S=H*s is INFORMATION-PATH accounting (H successive square-law demodulations end-to-end), NOT one physical spectrum. The short-hop advantage is a property of THIS scheme's economics and does NOT generalize to repeaters in general: amplify-and-forward, coherent/analog relaying, soft-information forwarding, joint multi-hop decoding, or any change to the decoder or per-hop insertion cost could reweight or invert the trade.",
+  "verdict_scope": "[SCOPED: K<=0.24, AT-CEILING right-censored.] K*(s)=0.24 at every span, but the routing curves are UNEQUALLY converged there: span-1.0 (short arm) is SATURATED (r2_d0=0.99995, 5.4e-05 from the hard r2=1 ceiling, K0.16->0.24 gain +0.0022, slope 0.028/K) while span-1.5 (long arm) is only near-saturated (r2_d0=0.98607, gain +0.0438, slope 0.55/K) and span-2.0 still climbs steeply (r2_d0=0.74476, gain +0.1361, slope 1.70/K) -- a ~20x-60x gradient asymmetry. A shared ceiling under-tunes LONGER hops more, so the primary D is an AT-CEILING UPPER estimate expected to COMPRESS for K>0.24. The SHORT-WINS SIGN is robust: (i) the long arm sits within 1.4% of routing saturation, so the censored differential headroom (~0.014/hop) is far below the e2e gap, which is dominated by STRUCTURAL per-hop loss (routing->e2e loss 0.0577 for the long arm's 2 hops vs 0.0152 for the short arm's 3 at near-equal routing), not coupling suboptimality; (ii) WITHIN K<=0.24 the short-minus-long routing gap SHRINKS monotonically as K rises (+0.1574@K0.08 -> +0.0139@K0.24), so K=0.24 is already the LEAST-favorable in-range coupling for SHORT and it still wins by the full D with all seeds positive. What the right-censored grid CANNOT certify above the ceiling: the MAGNITUDE, that the primary stays FULL-STRENGTH, and (by pure e2e-headroom arithmetic, long headroom > D) that a LONG-WINS reversal is impossible -- a reversal is mechanistically implausible but NOT formally excluded. The SECONDARY (S=2.0) contrast is more censoring-exposed (long arm far below saturation) so it is NOT ceiling-stable; it is consistency-only and non-gating. Behavior above K=0.24 is out of scope for this gate."
+ },
+ "recs": {
+  "1x3.0": {
+   "0": {
+    "seed": 0,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 0,
+       "enc": 5000,
+       "rep": 9000,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": 0.00072446334584364,
+      "r2_hop": 0.00072446334584364,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.033059950291262276,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     0.00072446334584364
+    ],
+    "e2e": 0.00072446334584364,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      0
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.033059950291262276
+    }
+   },
+   "1": {
+    "seed": 1,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 1,
+       "enc": 5001,
+       "rep": 9001,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": -0.011609389723961971,
+      "r2_hop": -0.011609389723961971,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.047660240479335945,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     -0.011609389723961971
+    ],
+    "e2e": -0.011609389723961971,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      1
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.047660240479335945
+    }
+   },
+   "2": {
+    "seed": 2,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 2,
+       "enc": 5002,
+       "rep": 9002,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": -0.0005449107080839344,
+      "r2_hop": -0.0005449107080839344,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.03372293197535832,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     -0.0005449107080839344
+    ],
+    "e2e": -0.0005449107080839344,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      2
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.03372293197535832
+    }
+   },
+   "3": {
+    "seed": 3,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 3,
+       "enc": 5003,
+       "rep": 9003,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": 0.0014155378187263867,
+      "r2_hop": 0.0014155378187263867,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.014855193804867066,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     0.0014155378187263867
+    ],
+    "e2e": 0.0014155378187263867,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      3
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.014855193804867066
+    }
+   },
+   "4": {
+    "seed": 4,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 4,
+       "enc": 5004,
+       "rep": 9004,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": -0.030313609236447103,
+      "r2_hop": -0.030313609236447103,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.04619851213802644,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     -0.030313609236447103
+    ],
+    "e2e": -0.030313609236447103,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      4
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.04619851213802644
+    }
+   },
+   "5": {
+    "seed": 5,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 5,
+       "enc": 5005,
+       "rep": 9005,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": 0.026515783207626598,
+      "r2_hop": 0.026515783207626598,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.041709209883257305,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     0.026515783207626598
+    ],
+    "e2e": 0.026515783207626598,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      5
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.041709209883257305
+    }
+   },
+   "6": {
+    "seed": 6,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 6,
+       "enc": 5006,
+       "rep": 9006,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": 0.0018170101731226351,
+      "r2_hop": 0.0018170101731226351,
+      "esp": {
+       "ok_slow": true,
+       "d_slow": null
+      },
+      "decoy_p95": 0.006748637226308715,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     0.0018170101731226351
+    ],
+    "e2e": 0.0018170101731226351,
+    "esp_all_stages": true,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      6
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": true,
+     "decoy_p95_committed_base40000": 0.006748637226308715
+    }
+   },
+   "7": {
+    "seed": 7,
+    "name": "1x3.0",
+    "H": 1,
+    "span": 3.0,
+    "K": 0.24,
+    "arm": "context",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 7,
+       "enc": 5007,
+       "rep": 9007,
+       "carrier": null,
+       "decoy_base": null
+      },
+      "repeater_in": null,
+      "r2_cum": -0.00768263120402457,
+      "r2_hop": -0.00768263120402457,
+      "esp": {
+       "ok_slow": false,
+       "d_slow": null
+      },
+      "decoy_p95": 0.04044379547861723,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null,
+      "sourced": true
+     }
+    ],
+    "r2_cum": [
+     -0.00768263120402457
+    ],
+    "e2e": -0.00768263120402457,
+    "esp_all_stages": false,
+    "sourced_from_committed": true,
+    "label": "SOURCED-FROM-COMMITTED",
+    "provenance": {
+     "sourced_from_committed": true,
+     "source": "phase1_routing.json (decade_drive b0f7664)",
+     "sha256": "2e739315141e88c3c5c698f88ed6f84efaae46f7257397c756f58ee4c3965590",
+     "cell": [
+      3.0,
+      0.24,
+      7
+     ],
+     "bridge": "smoke seed-0 bit-exact reproduction (diff 0.0e+00)",
+     "esp_inherited": false,
+     "decoy_p95_committed_base40000": 0.04044379547861723
+    }
+   }
+  },
+  "2x1.5": {
+   "0": {
+    "seed": 0,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 0,
+       "enc": 5000,
+       "rep": 9000,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9814697252519144,
+      "r2_hop": 0.9814697252519144,
+      "esp": {
+       "d_slow": 3.371106714796894e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.14059478783456256,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 100,
+       "enc": 5100,
+       "rep": 9100,
+       "carrier": 2000,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17143250243029456,
+       "rms_target": 0.1747968052847344,
+       "scale": 1.0196246499744572,
+       "mean_out": -4.680782185507906e-19,
+       "rms_out": 0.1747968052847344,
+       "oob_residual_frac": 1.1336251184798587e-31,
+       "dc": 0.5321028176858988,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9623337121485657,
+      "r2_hop": 0.9931383885847367,
+      "esp": {
+       "d_slow": 4.27965436061159e-09,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.012454800926838667,
+      "rms_in": 0.17143250243029456,
+      "rms_target": 0.1747968052847344,
+      "scale": 1.0196246499744572
+     }
+    ],
+    "r2_cum": [
+     0.9814697252519144,
+     0.9623337121485657
+    ],
+    "e2e": 0.9623337121485657,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.6313412661215538,
+    "e2e_decoy_mean": -1.4759771652576446
+   },
+   "1": {
+    "seed": 1,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 1,
+       "enc": 5001,
+       "rep": 9001,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9877764190148102,
+      "r2_hop": 0.9877764190148102,
+      "esp": {
+       "d_slow": 5.180121514138151e-09,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.0709542167512748,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 101,
+       "enc": 5101,
+       "rep": 9101,
+       "carrier": 2001,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16941803057961247,
+       "rms_target": 0.1804318359530481,
+       "scale": 1.065009641156583,
+       "mean_out": 1.4042346556523719e-18,
+       "rms_out": 0.1804318359530481,
+       "oob_residual_frac": 1.1513882168549991e-31,
+       "dc": 0.5531057711665813,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.8981403501806609,
+      "r2_hop": 0.9876965539607074,
+      "esp": {
+       "d_slow": 1.4282106636658594e-09,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.010515900109669893,
+      "rms_in": 0.16941803057961247,
+      "rms_target": 0.1804318359530481,
+      "scale": 1.065009641156583
+     }
+    ],
+    "r2_cum": [
+     0.9877764190148102,
+     0.8981403501806609
+    ],
+    "e2e": 0.8981403501806609,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.20659767845510868,
+    "e2e_decoy_mean": -0.8637876957558487
+   },
+   "2": {
+    "seed": 2,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 2,
+       "enc": 5002,
+       "rep": 9002,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9900247290105952,
+      "r2_hop": 0.9900247290105952,
+      "esp": {
+       "d_slow": 3.4959752809303897e-12,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.012664637645993492,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 102,
+       "enc": 5102,
+       "rep": 9102,
+       "carrier": 2002,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17851222219687932,
+       "rms_target": 0.18133553502615649,
+       "scale": 1.0158157956611138,
+       "mean_out": 2.340391092753953e-19,
+       "rms_out": 0.18133553502615654,
+       "oob_residual_frac": 1.1512944150772586e-31,
+       "dc": 0.5174021974819143,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9722262646352626,
+      "r2_hop": 0.988403709682527,
+      "esp": {
+       "d_slow": 0.0006363241534579349,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.024716221115050577,
+      "rms_in": 0.17851222219687932,
+      "rms_target": 0.18133553502615649,
+      "scale": 1.0158157956611138
+     }
+    ],
+    "r2_cum": [
+     0.9900247290105952,
+     0.9722262646352626
+    ],
+    "e2e": 0.9722262646352626,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.6741410536161629,
+    "e2e_decoy_mean": -1.8263036120445457
+   },
+   "3": {
+    "seed": 3,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 3,
+       "enc": 5003,
+       "rep": 9003,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9823541653237987,
+      "r2_hop": 0.9823541653237987,
+      "esp": {
+       "d_slow": 3.507345628610568e-10,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.047333412065558286,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 103,
+       "enc": 5103,
+       "rep": 9103,
+       "carrier": 2003,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16050835625800527,
+       "rms_target": 0.16462691248612865,
+       "scale": 1.025659450536663,
+       "mean_out": -1.6382737649277671e-18,
+       "rms_out": 0.16462691248612865,
+       "oob_residual_frac": 1.034253792132006e-31,
+       "dc": 0.5911886024807689,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.947683294938465,
+      "r2_hop": 0.9869179009319664,
+      "esp": {
+       "d_slow": 3.926084214637195e-08,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.010126485000451171,
+      "rms_in": 0.16050835625800527,
+      "rms_target": 0.16462691248612865,
+      "scale": 1.025659450536663
+     }
+    ],
+    "r2_cum": [
+     0.9823541653237987,
+     0.947683294938465
+    ],
+    "e2e": 0.947683294938465,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.361207365420116,
+    "e2e_decoy_mean": -1.0958197086455277
+   },
+   "4": {
+    "seed": 4,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 4,
+       "enc": 5004,
+       "rep": 9004,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9900557353356574,
+      "r2_hop": 0.9900557353356574,
+      "esp": {
+       "d_slow": 2.0501824372603173e-08,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.04113537274023434,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 104,
+       "enc": 5104,
+       "rep": 9104,
+       "carrier": 2004,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17526068337558587,
+       "rms_target": 0.19579432135487385,
+       "scale": 1.117160549552829,
+       "mean_out": -2.106351983478558e-18,
+       "rms_out": 0.19579432135487387,
+       "oob_residual_frac": 9.900552907509407e-32,
+       "dc": 0.5963543371771481,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.7974354077510907,
+      "r2_hop": 0.987523023124647,
+      "esp": {
+       "d_slow": 5.987750200581585e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.008783650809335256,
+      "rms_in": 0.17526068337558587,
+      "rms_target": 0.19579432135487385,
+      "scale": 1.117160549552829
+     }
+    ],
+    "r2_cum": [
+     0.9900557353356574,
+     0.7974354077510907
+    ],
+    "e2e": 0.7974354077510907,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.7739322553790169,
+    "e2e_decoy_mean": -1.8164892417393437
+   },
+   "5": {
+    "seed": 5,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 5,
+       "enc": 5005,
+       "rep": 9005,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.986100475787461,
+      "r2_hop": 0.986100475787461,
+      "esp": {
+       "d_slow": 1.1781519593506306e-14,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.06389118147699516,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 105,
+       "enc": 5105,
+       "rep": 9105,
+       "carrier": 2005,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.15248448513039298,
+       "rms_target": 0.1554683674469312,
+       "scale": 1.0195684322505771,
+       "mean_out": -4.680782185507906e-19,
+       "rms_out": 0.15546836744693124,
+       "oob_residual_frac": 1.1857595803385203e-31,
+       "dc": 0.529963048108294,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9464066210812012,
+      "r2_hop": 0.9751721309159033,
+      "esp": {
+       "d_slow": 3.573179014072148e-13,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.07218693570226323,
+      "rms_in": 0.15248448513039298,
+      "rms_target": 0.1554683674469312,
+      "scale": 1.0195684322505771
+     }
+    ],
+    "r2_cum": [
+     0.986100475787461,
+     0.9464066210812012
+    ],
+    "e2e": 0.9464066210812012,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.2780063859808429,
+    "e2e_decoy_mean": -0.972047805451701
+   },
+   "6": {
+    "seed": 6,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 6,
+       "enc": 5006,
+       "rep": 9006,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9871637983892345,
+      "r2_hop": 0.9871637983892345,
+      "esp": {
+       "d_slow": 7.835042039127511e-09,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.006031821241505421,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 106,
+       "enc": 5106,
+       "rep": 9106,
+       "carrier": 2006,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16577279776471116,
+       "rms_target": 0.1689758525433234,
+       "scale": 1.0193219564476343,
+       "mean_out": -9.361564371015812e-19,
+       "rms_out": 0.1689758525433234,
+       "oob_residual_frac": 1.060955046222145e-31,
+       "dc": 0.5358245755308133,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9604369207758032,
+      "r2_hop": 0.9847667625589132,
+      "esp": {
+       "d_slow": 4.713324953554209e-08,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.026671492639588835,
+      "rms_in": 0.16577279776471116,
+      "rms_target": 0.1689758525433234,
+      "scale": 1.0193219564476343
+     }
+    ],
+    "r2_cum": [
+     0.9871637983892345,
+     0.9604369207758032
+    ],
+    "e2e": 0.9604369207758032,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.3700019123893356,
+    "e2e_decoy_mean": -1.4933455253805679
+   },
+   "7": {
+    "seed": 7,
+    "name": "2x1.5",
+    "H": 2,
+    "span": 1.5,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 7,
+       "enc": 5007,
+       "rep": 9007,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9866870441033668,
+      "r2_hop": 0.9866870441033668,
+      "esp": {
+       "d_slow": 0.0017444567466913992,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.047567216131160016,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 107,
+       "enc": 5107,
+       "rep": 9107,
+       "carrier": 2007,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.15255913820274802,
+       "rms_target": 0.15395720256005724,
+       "scale": 1.0091640813770935,
+       "mean_out": -1.6382737649277671e-18,
+       "rms_out": 0.15395720256005727,
+       "oob_residual_frac": 1.1460379104678365e-31,
+       "dc": 0.5677692087339611,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9422782996616369,
+      "r2_hop": 0.9857459282782507,
+      "esp": {
+       "d_slow": 0.0008434970735776915,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.016757836460826233,
+      "rms_in": 0.15255913820274802,
+      "rms_target": 0.15395720256005724,
+      "scale": 1.0091640813770935
+     }
+    ],
+    "r2_cum": [
+     0.9866870441033668,
+     0.9422782996616369
+    ],
+    "e2e": 0.9422782996616369,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.1407189419400959,
+    "e2e_decoy_mean": -0.990123891689598
+   }
+  },
+  "3x1.0": {
+   "0": {
+    "seed": 0,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 0,
+       "enc": 5000,
+       "rep": 9000,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999322655081512,
+      "r2_hop": 0.9999322655081512,
+      "esp": {
+       "d_slow": 1.1124095027576206e-08,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.4484120648406753,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 100,
+       "enc": 5100,
+       "rep": 9100,
+       "carrier": 2000,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.1773203845662941,
+       "rms_target": 0.17858840743152657,
+       "scale": 1.0071510270425699,
+       "mean_out": 1.295260195396016e-18,
+       "rms_out": 0.17858840743152654,
+       "oob_residual_frac": 1.0483818510774226e-31,
+       "dc": 0.5064517114696861,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9808589585740936,
+      "r2_hop": 0.9999726412657309,
+      "esp": {
+       "d_slow": 1.3101935713943633e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2735877596638218,
+      "rms_in": 0.1773203845662941,
+      "rms_target": 0.17858840743152657,
+      "scale": 1.0071510270425699
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 200,
+       "enc": 5200,
+       "rep": 9200,
+       "carrier": 2100,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.1785738319194327,
+       "rms_target": 0.17858840743152657,
+       "scale": 1.0000816217691988,
+       "mean_out": -7.401486830834377e-19,
+       "rms_out": 0.1785884074315266,
+       "oob_residual_frac": 8.941842471874713e-32,
+       "dc": 0.5064517114696861,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9809917492917849,
+      "r2_hop": 0.9999323150717112,
+      "esp": {
+       "d_slow": 1.2247582792388973e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.32298608571089105,
+      "rms_in": 0.1785738319194327,
+      "rms_target": 0.17858840743152657,
+      "scale": 1.0000816217691988
+     }
+    ],
+    "r2_cum": [
+     0.9999322655081512,
+     0.9808589585740936,
+     0.9809917492917849
+    ],
+    "e2e": 0.9809917492917849,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.750153316726434,
+    "e2e_decoy_mean": -1.897437398355792
+   },
+   "1": {
+    "seed": 1,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 1,
+       "enc": 5001,
+       "rep": 9001,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999586123359188,
+      "r2_hop": 0.9999586123359188,
+      "esp": {
+       "d_slow": 1.664410362365807e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.21887068988787917,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 101,
+       "enc": 5101,
+       "rep": 9101,
+       "carrier": 2001,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18068823724773975,
+       "rms_target": 0.18106033380616945,
+       "scale": 1.0020593291743698,
+       "mean_out": -1.1102230246251566e-18,
+       "rms_out": 0.1810603338061695,
+       "oob_residual_frac": 7.957088805146052e-32,
+       "dc": 0.5508433730089732,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9968296108276391,
+      "r2_hop": 0.9999050217548539,
+      "esp": {
+       "d_slow": 1.1741031387661618e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.18553366989134149,
+      "rms_in": 0.18068823724773975,
+      "rms_target": 0.18106033380616945,
+      "scale": 1.0020593291743698
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 201,
+       "enc": 5201,
+       "rep": 9201,
+       "carrier": 2101,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18102890767307353,
+       "rms_target": 0.18106033380616945,
+       "scale": 1.0001735973193446,
+       "mean_out": 0.0,
+       "rms_out": 0.18106033380616945,
+       "oob_residual_frac": 9.546014395252228e-32,
+       "dc": 0.5508433730089732,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.996831959402355,
+      "r2_hop": 0.9999335094793004,
+      "esp": {
+       "d_slow": 1.0994084987656684e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.33754231231801785,
+      "rms_in": 0.18102890767307353,
+      "rms_target": 0.18106033380616945,
+      "scale": 1.0001735973193446
+     }
+    ],
+    "r2_cum": [
+     0.9999586123359188,
+     0.9968296108276391,
+     0.996831959402355
+    ],
+    "e2e": 0.996831959402355,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.24531679729627098,
+    "e2e_decoy_mean": -1.008543794657177
+   },
+   "2": {
+    "seed": 2,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 2,
+       "enc": 5002,
+       "rep": 9002,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999619591873196,
+      "r2_hop": 0.9999619591873196,
+      "esp": {
+       "d_slow": 1.1412338899368707e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.23449274663464334,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 102,
+       "enc": 5102,
+       "rep": 9102,
+       "carrier": 2002,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16823388716009996,
+       "rms_target": 0.1687351336897917,
+       "scale": 1.0029794623315975,
+       "mean_out": -9.251858538542971e-19,
+       "rms_out": 0.1687351336897917,
+       "oob_residual_frac": 8.475240469117148e-32,
+       "dc": 0.5517586816385178,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9944685694836036,
+      "r2_hop": 0.9998776664300566,
+      "esp": {
+       "d_slow": 2.0076802253172876e-07,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.23225870098903872,
+      "rms_in": 0.16823388716009996,
+      "rms_target": 0.1687351336897917,
+      "scale": 1.0029794623315975
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 202,
+       "enc": 5202,
+       "rep": 9202,
+       "carrier": 2102,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16862621190107294,
+       "rms_target": 0.1687351336897917,
+       "scale": 1.0006459362841091,
+       "mean_out": 0.0,
+       "rms_out": 0.1687351336897917,
+       "oob_residual_frac": 1.0255615018790976e-31,
+       "dc": 0.5517586816385178,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9944621276073194,
+      "r2_hop": 0.999930098426498,
+      "esp": {
+       "d_slow": 4.1585149682463283e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.3755245836976082,
+      "rms_in": 0.16862621190107294,
+      "rms_target": 0.1687351336897917,
+      "scale": 1.0006459362841091
+     }
+    ],
+    "r2_cum": [
+     0.9999619591873196,
+     0.9944685694836036,
+     0.9944621276073194
+    ],
+    "e2e": 0.9944621276073194,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -1.0345611527844694,
+    "e2e_decoy_mean": -1.7250010952105437
+   },
+   "3": {
+    "seed": 3,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 3,
+       "enc": 5003,
+       "rep": 9003,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999215086997425,
+      "r2_hop": 0.9999215086997425,
+      "esp": {
+       "d_slow": 1.1197600405320182e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.392114994357485,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 103,
+       "enc": 5103,
+       "rep": 9103,
+       "carrier": 2003,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16906072979984216,
+       "rms_target": 0.16939887998172531,
+       "scale": 1.0020001698932892,
+       "mean_out": 9.251858538542971e-19,
+       "rms_out": 0.1693988799817253,
+       "oob_residual_frac": 8.997002032960645e-32,
+       "dc": 0.5897629788329963,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.995067263952905,
+      "r2_hop": 0.9998810415761908,
+      "esp": {
+       "d_slow": 1.1689997106598517e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.20515743258472097,
+      "rms_in": 0.16906072979984216,
+      "rms_target": 0.16939887998172531,
+      "scale": 1.0020001698932892
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 203,
+       "enc": 5203,
+       "rep": 9203,
+       "carrier": 2103,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16934827772715005,
+       "rms_target": 0.16939887998172531,
+       "scale": 1.00029880584116,
+       "mean_out": 1.8503717077085944e-19,
+       "rms_out": 0.16939887998172531,
+       "oob_residual_frac": 8.884852214819374e-32,
+       "dc": 0.5897629788329963,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.995080771552031,
+      "r2_hop": 0.9999184767661374,
+      "esp": {
+       "d_slow": 1.3701561543844503e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.28090515242450825,
+      "rms_in": 0.16934827772715005,
+      "rms_target": 0.16939887998172531,
+      "scale": 1.00029880584116
+     }
+    ],
+    "r2_cum": [
+     0.9999215086997425,
+     0.995067263952905,
+     0.995080771552031
+    ],
+    "e2e": 0.995080771552031,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.42965278862488904,
+    "e2e_decoy_mean": -1.3509011075253352
+   },
+   "4": {
+    "seed": 4,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 4,
+       "enc": 5004,
+       "rep": 9004,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999487833961818,
+      "r2_hop": 0.9999487833961818,
+      "esp": {
+       "d_slow": 2.2176105141140627e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.38741496995624386,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 104,
+       "enc": 5104,
+       "rep": 9104,
+       "carrier": 2004,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18723129371498345,
+       "rms_target": 0.18897786301739214,
+       "scale": 1.0093284048182,
+       "mean_out": -9.251858538542971e-19,
+       "rms_out": 0.18897786301739214,
+       "oob_residual_frac": 9.770162629163164e-32,
+       "dc": 0.5937791305054947,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9775124392544794,
+      "r2_hop": 0.9999697502125038,
+      "esp": {
+       "d_slow": 1.0767907204527181e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.46578211856821866,
+      "rms_in": 0.18723129371498345,
+      "rms_target": 0.18897786301739214,
+      "scale": 1.0093284048182
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 204,
+       "enc": 5204,
+       "rep": 9204,
+       "carrier": 2104,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18893998025664607,
+       "rms_target": 0.18897786301739214,
+       "scale": 1.000200501559779,
+       "mean_out": 1.1102230246251566e-18,
+       "rms_out": 0.18897786301739214,
+       "oob_residual_frac": 9.278564316608426e-32,
+       "dc": 0.5937791305054947,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9772107160958651,
+      "r2_hop": 0.9999005731118139,
+      "esp": {
+       "d_slow": 1.1172530400732626e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2850722834568233,
+      "rms_in": 0.18893998025664607,
+      "rms_target": 0.18897786301739214,
+      "scale": 1.000200501559779
+     }
+    ],
+    "r2_cum": [
+     0.9999487833961818,
+     0.9775124392544794,
+     0.9772107160958651
+    ],
+    "e2e": 0.9772107160958651,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.5379945516486146,
+    "e2e_decoy_mean": -1.7716746159025025
+   },
+   "5": {
+    "seed": 5,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 5,
+       "enc": 5005,
+       "rep": 9005,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999773089197015,
+      "r2_hop": 0.9999773089197015,
+      "esp": {
+       "d_slow": 1.0906447057483767e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2952828227398698,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 105,
+       "enc": 5105,
+       "rep": 9105,
+       "carrier": 2005,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.15577007703678378,
+       "rms_target": 0.15750735135002714,
+       "scale": 1.0111528115430868,
+       "mean_out": -6.47630097698008e-19,
+       "rms_out": 0.15750735135002714,
+       "oob_residual_frac": 1.1127643383771766e-31,
+       "dc": 0.5298863140315496,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9587159849394085,
+      "r2_hop": 0.9999091023868496,
+      "esp": {
+       "d_slow": 1.0814517001680212e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.39669776625065895,
+      "rms_in": 0.15577007703678378,
+      "rms_target": 0.15750735135002714,
+      "scale": 1.0111528115430868
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 205,
+       "enc": 5205,
+       "rep": 9205,
+       "carrier": 2105,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.15746343068080723,
+       "rms_target": 0.15750735135002714,
+       "scale": 1.0002789261546634,
+       "mean_out": -9.251858538542971e-19,
+       "rms_out": 0.15750735135002714,
+       "oob_residual_frac": 1.0870227607503187e-31,
+       "dc": 0.5298863140315496,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9587612423734794,
+      "r2_hop": 0.9999553668798473,
+      "esp": {
+       "d_slow": 1.0666288255048819e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.33557607803647893,
+      "rms_in": 0.15746343068080723,
+      "rms_target": 0.15750735135002714,
+      "scale": 1.0002789261546634
+     }
+    ],
+    "r2_cum": [
+     0.9999773089197015,
+     0.9587159849394085,
+     0.9587612423734794
+    ],
+    "e2e": 0.9587612423734794,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.22490581261266673,
+    "e2e_decoy_mean": -0.8511107148576624
+   },
+   "6": {
+    "seed": 6,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 6,
+       "enc": 5006,
+       "rep": 9006,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999685423618849,
+      "r2_hop": 0.9999685423618849,
+      "esp": {
+       "d_slow": 3.1697209690173417e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.39592277830915046,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 106,
+       "enc": 5106,
+       "rep": 9106,
+       "carrier": 2006,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17166253458166492,
+       "rms_target": 0.1718280111604875,
+       "scale": 1.0009639644388675,
+       "mean_out": -7.401486830834377e-19,
+       "rms_out": 0.1718280111604875,
+       "oob_residual_frac": 9.880692222147444e-32,
+       "dc": 0.5389443673653835,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9987011978548991,
+      "r2_hop": 0.9999518253032564,
+      "esp": {
+       "d_slow": 8.966100977819508e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.32248584142771586,
+      "rms_in": 0.17166253458166492,
+      "rms_target": 0.1718280111604875,
+      "scale": 1.0009639644388675
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 206,
+       "enc": 5206,
+       "rep": 9206,
+       "carrier": 2106,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17175457505770042,
+       "rms_target": 0.1718280111604875,
+       "scale": 1.0004275641726714,
+       "mean_out": 5.551115123125783e-19,
+       "rms_out": 0.17182801116048746,
+       "oob_residual_frac": 8.426895654449854e-32,
+       "dc": 0.5389443673653835,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9987121470634213,
+      "r2_hop": 0.9999683616860913,
+      "esp": {
+       "d_slow": 1.1167630392479217e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.48624292746188147,
+      "rms_in": 0.17175457505770042,
+      "rms_target": 0.1718280111604875,
+      "scale": 1.0004275641726714
+     }
+    ],
+    "r2_cum": [
+     0.9999685423618849,
+     0.9987011978548991,
+     0.9987121470634213
+    ],
+    "e2e": 0.9987121470634213,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.3952262489018323,
+    "e2e_decoy_mean": -1.6670496191212538
+   },
+   "7": {
+    "seed": 7,
+    "name": "3x1.0",
+    "H": 3,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 7,
+       "enc": 5007,
+       "rep": 9007,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999253094915171,
+      "r2_hop": 0.9999253094915171,
+      "esp": {
+       "d_slow": 1.8551981422354043e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2564725114586821,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 107,
+       "enc": 5107,
+       "rep": 9107,
+       "carrier": 2007,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.14847062453887538,
+       "rms_target": 0.14940915898241836,
+       "scale": 1.0063213477174888,
+       "mean_out": -1.3877787807814458e-18,
+       "rms_out": 0.14940915898241833,
+       "oob_residual_frac": 1.0222826228565565e-31,
+       "dc": 0.5682528182669716,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9761048177352215,
+      "r2_hop": 0.9999141727681136,
+      "esp": {
+       "d_slow": 8.342135328989312e-07,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.3607560078728364,
+      "rms_in": 0.14847062453887538,
+      "rms_target": 0.14940915898241836,
+      "scale": 1.0063213477174888
+     },
+     {
+      "stage": 3,
+      "seeds": {
+       "build": 207,
+       "enc": 5207,
+       "rep": 9207,
+       "carrier": 2107,
+       "decoy_base": 440000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.1493856782930099,
+       "rms_target": 0.14940915898241836,
+       "scale": 1.0001571816634418,
+       "mean_out": -6.47630097698008e-19,
+       "rms_out": 0.14940915898241836,
+       "oob_residual_frac": 1.0086140152970356e-31,
+       "dc": 0.5682528182669716,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9758674715227537,
+      "r2_hop": 0.9999488478994257,
+      "esp": {
+       "d_slow": 1.158977905665224e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.31838850722594464,
+      "rms_in": 0.1493856782930099,
+      "rms_target": 0.14940915898241836,
+      "scale": 1.0001571816634418
+     }
+    ],
+    "r2_cum": [
+     0.9999253094915171,
+     0.9761048177352215,
+     0.9758674715227537
+    ],
+    "e2e": 0.9758674715227537,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.19911969118953285,
+    "e2e_decoy_mean": -0.8377224053465365
+   }
+  },
+  "1x2.0": {
+   "0": {
+    "seed": 0,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 0,
+       "enc": 5000,
+       "rep": 9000,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.768837038764002,
+      "r2_hop": 0.768837038764002,
+      "esp": {
+       "d_slow": 2.0516343469048418e-05,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.010940943020753009,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.768837038764002
+    ],
+    "e2e": 0.768837038764002,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.4187510479853665,
+    "e2e_decoy_mean": -1.1481139110404897
+   },
+   "1": {
+    "seed": 1,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 1,
+       "enc": 5001,
+       "rep": 9001,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.7610580034933382,
+      "r2_hop": 0.7610580034933382,
+      "esp": {
+       "d_slow": 4.311282381812946e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.0663208573583307,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.7610580034933382
+    ],
+    "e2e": 0.7610580034933382,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.2810147105082881,
+    "e2e_decoy_mean": -0.8958522271589826
+   },
+   "2": {
+    "seed": 2,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 2,
+       "enc": 5002,
+       "rep": 9002,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.8190987886883144,
+      "r2_hop": 0.8190987886883144,
+      "esp": {
+       "d_slow": 1.2715165076156768e-09,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.020211220444177447,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.8190987886883144
+    ],
+    "e2e": 0.8190987886883144,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.5099100055115268,
+    "e2e_decoy_mean": -1.4024107077303363
+   },
+   "3": {
+    "seed": 3,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 3,
+       "enc": 5003,
+       "rep": 9003,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.6778987883998928,
+      "r2_hop": 0.6778987883998931,
+      "esp": {
+       "d_slow": 1.6599978136735e-07,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.018403804743507883,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.6778987883998928
+    ],
+    "e2e": 0.6778987883998928,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.2033369899353329,
+    "e2e_decoy_mean": -0.6766192102196474
+   },
+   "4": {
+    "seed": 4,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 4,
+       "enc": 5004,
+       "rep": 9004,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.7552331693143393,
+      "r2_hop": 0.7552331693143393,
+      "esp": {
+       "d_slow": 8.590495780328044e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.002740956967307672,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.7552331693143393
+    ],
+    "e2e": 0.7552331693143393,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.39633145836895894,
+    "e2e_decoy_mean": -1.195200016942332
+   },
+   "5": {
+    "seed": 5,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 5,
+       "enc": 5005,
+       "rep": 9005,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.709870996963911,
+      "r2_hop": 0.709870996963911,
+      "esp": {
+       "d_slow": 2.0418996979513636e-10,
+       "ok_slow": true
+      },
+      "decoy_p95": 0.011968571628821877,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.709870996963911
+    ],
+    "e2e": 0.709870996963911,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.3395923933099552,
+    "e2e_decoy_mean": -0.7830374657499346
+   },
+   "6": {
+    "seed": 6,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 6,
+       "enc": 5006,
+       "rep": 9006,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.8068029278191985,
+      "r2_hop": 0.8068029278191985,
+      "esp": {
+       "d_slow": 4.7446777502457035e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.013782488997075147,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.8068029278191985
+    ],
+    "e2e": 0.8068029278191985,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.41402717175398257,
+    "e2e_decoy_mean": -1.3207254526516579
+   },
+   "7": {
+    "seed": 7,
+    "name": "1x2.0",
+    "H": 1,
+    "span": 2.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 7,
+       "enc": 5007,
+       "rep": 9007,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.7191291314672488,
+      "r2_hop": 0.7191291314672488,
+      "esp": {
+       "d_slow": 0.0406661825744808,
+       "ok_slow": false
+      },
+      "decoy_p95": 0.01933798823110407,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     }
+    ],
+    "r2_cum": [
+     0.7191291314672488
+    ],
+    "e2e": 0.7191291314672488,
+    "esp_all_stages": false,
+    "e2e_decoy_p95": -0.09024644527041491,
+    "e2e_decoy_mean": -0.6246088303215165
+   }
+  },
+  "2x1.0": {
+   "0": {
+    "seed": 0,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 0,
+       "enc": 5000,
+       "rep": 9000,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999322655081512,
+      "r2_hop": 0.9999322655081512,
+      "esp": {
+       "d_slow": 1.1124095027576206e-08,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.4484120648406753,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 100,
+       "enc": 5100,
+       "rep": 9100,
+       "carrier": 2000,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.1773203845662941,
+       "rms_target": 0.17858840743152657,
+       "scale": 1.0071510270425699,
+       "mean_out": 1.295260195396016e-18,
+       "rms_out": 0.17858840743152654,
+       "oob_residual_frac": 1.0483818510774226e-31,
+       "dc": 0.5064517114696861,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9808589585740936,
+      "r2_hop": 0.9999726412657309,
+      "esp": {
+       "d_slow": 1.3101935713943633e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2735877596638218,
+      "rms_in": 0.1773203845662941,
+      "rms_target": 0.17858840743152657,
+      "scale": 1.0071510270425699
+     }
+    ],
+    "r2_cum": [
+     0.9999322655081512,
+     0.9808589585740936
+    ],
+    "e2e": 0.9808589585740936,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.7485378084489342,
+    "e2e_decoy_mean": -1.8963303717741586
+   },
+   "1": {
+    "seed": 1,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 1,
+       "enc": 5001,
+       "rep": 9001,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999586123359188,
+      "r2_hop": 0.9999586123359188,
+      "esp": {
+       "d_slow": 1.664410362365807e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.21887068988787917,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 101,
+       "enc": 5101,
+       "rep": 9101,
+       "carrier": 2001,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18068823724773975,
+       "rms_target": 0.18106033380616945,
+       "scale": 1.0020593291743698,
+       "mean_out": -1.1102230246251566e-18,
+       "rms_out": 0.1810603338061695,
+       "oob_residual_frac": 7.957088805146052e-32,
+       "dc": 0.5508433730089732,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9968296108276391,
+      "r2_hop": 0.9999050217548539,
+      "esp": {
+       "d_slow": 1.1741031387661618e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.18553366989134149,
+      "rms_in": 0.18068823724773975,
+      "rms_target": 0.18106033380616945,
+      "scale": 1.0020593291743698
+     }
+    ],
+    "r2_cum": [
+     0.9999586123359188,
+     0.9968296108276391
+    ],
+    "e2e": 0.9968296108276391,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.24578659210576684,
+    "e2e_decoy_mean": -1.008718395446731
+   },
+   "2": {
+    "seed": 2,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 2,
+       "enc": 5002,
+       "rep": 9002,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999619591873196,
+      "r2_hop": 0.9999619591873196,
+      "esp": {
+       "d_slow": 1.1412338899368707e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.23449274663464334,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 102,
+       "enc": 5102,
+       "rep": 9102,
+       "carrier": 2002,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16823388716009996,
+       "rms_target": 0.1687351336897917,
+       "scale": 1.0029794623315975,
+       "mean_out": -9.251858538542971e-19,
+       "rms_out": 0.1687351336897917,
+       "oob_residual_frac": 8.475240469117148e-32,
+       "dc": 0.5517586816385178,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9944685694836036,
+      "r2_hop": 0.9998776664300566,
+      "esp": {
+       "d_slow": 2.0076802253172876e-07,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.23225870098903872,
+      "rms_in": 0.16823388716009996,
+      "rms_target": 0.1687351336897917,
+      "scale": 1.0029794623315975
+     }
+    ],
+    "r2_cum": [
+     0.9999619591873196,
+     0.9944685694836036
+    ],
+    "e2e": 0.9944685694836036,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -1.0378020680393583,
+    "e2e_decoy_mean": -1.7314037190026523
+   },
+   "3": {
+    "seed": 3,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 3,
+       "enc": 5003,
+       "rep": 9003,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999215086997425,
+      "r2_hop": 0.9999215086997425,
+      "esp": {
+       "d_slow": 1.1197600405320182e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.392114994357485,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 103,
+       "enc": 5103,
+       "rep": 9103,
+       "carrier": 2003,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.16906072979984216,
+       "rms_target": 0.16939887998172531,
+       "scale": 1.0020001698932892,
+       "mean_out": 9.251858538542971e-19,
+       "rms_out": 0.1693988799817253,
+       "oob_residual_frac": 8.997002032960645e-32,
+       "dc": 0.5897629788329963,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.995067263952905,
+      "r2_hop": 0.9998810415761908,
+      "esp": {
+       "d_slow": 1.1689997106598517e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.20515743258472097,
+      "rms_in": 0.16906072979984216,
+      "rms_target": 0.16939887998172531,
+      "scale": 1.0020001698932892
+     }
+    ],
+    "r2_cum": [
+     0.9999215086997425,
+     0.995067263952905
+    ],
+    "e2e": 0.995067263952905,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.42873128741454203,
+    "e2e_decoy_mean": -1.3515581724617476
+   },
+   "4": {
+    "seed": 4,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 4,
+       "enc": 5004,
+       "rep": 9004,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999487833961818,
+      "r2_hop": 0.9999487833961818,
+      "esp": {
+       "d_slow": 2.2176105141140627e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.38741496995624386,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 104,
+       "enc": 5104,
+       "rep": 9104,
+       "carrier": 2004,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.18723129371498345,
+       "rms_target": 0.18897786301739214,
+       "scale": 1.0093284048182,
+       "mean_out": -9.251858538542971e-19,
+       "rms_out": 0.18897786301739214,
+       "oob_residual_frac": 9.770162629163164e-32,
+       "dc": 0.5937791305054947,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9775124392544794,
+      "r2_hop": 0.9999697502125038,
+      "esp": {
+       "d_slow": 1.0767907204527181e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.46578211856821866,
+      "rms_in": 0.18723129371498345,
+      "rms_target": 0.18897786301739214,
+      "scale": 1.0093284048182
+     }
+    ],
+    "r2_cum": [
+     0.9999487833961818,
+     0.9775124392544794
+    ],
+    "e2e": 0.9775124392544794,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.5365648065194583,
+    "e2e_decoy_mean": -1.7693713913664417
+   },
+   "5": {
+    "seed": 5,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 5,
+       "enc": 5005,
+       "rep": 9005,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999773089197015,
+      "r2_hop": 0.9999773089197015,
+      "esp": {
+       "d_slow": 1.0906447057483767e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2952828227398698,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 105,
+       "enc": 5105,
+       "rep": 9105,
+       "carrier": 2005,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.15577007703678378,
+       "rms_target": 0.15750735135002714,
+       "scale": 1.0111528115430868,
+       "mean_out": -6.47630097698008e-19,
+       "rms_out": 0.15750735135002714,
+       "oob_residual_frac": 1.1127643383771766e-31,
+       "dc": 0.5298863140315496,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9587159849394085,
+      "r2_hop": 0.9999091023868496,
+      "esp": {
+       "d_slow": 1.0814517001680212e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.39669776625065895,
+      "rms_in": 0.15577007703678378,
+      "rms_target": 0.15750735135002714,
+      "scale": 1.0111528115430868
+     }
+    ],
+    "r2_cum": [
+     0.9999773089197015,
+     0.9587159849394085
+    ],
+    "e2e": 0.9587159849394085,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.22427221831828711,
+    "e2e_decoy_mean": -0.8517761850969435
+   },
+   "6": {
+    "seed": 6,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 6,
+       "enc": 5006,
+       "rep": 9006,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999685423618849,
+      "r2_hop": 0.9999685423618849,
+      "esp": {
+       "d_slow": 3.1697209690173417e-16,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.39592277830915046,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 106,
+       "enc": 5106,
+       "rep": 9106,
+       "carrier": 2006,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.17166253458166492,
+       "rms_target": 0.1718280111604875,
+       "scale": 1.0009639644388675,
+       "mean_out": -7.401486830834377e-19,
+       "rms_out": 0.1718280111604875,
+       "oob_residual_frac": 9.880692222147444e-32,
+       "dc": 0.5389443673653835,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9987011978548991,
+      "r2_hop": 0.9999518253032564,
+      "esp": {
+       "d_slow": 8.966100977819508e-15,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.32248584142771586,
+      "rms_in": 0.17166253458166492,
+      "rms_target": 0.1718280111604875,
+      "scale": 1.0009639644388675
+     }
+    ],
+    "r2_cum": [
+     0.9999685423618849,
+     0.9987011978548991
+    ],
+    "e2e": 0.9987011978548991,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.3934728487618669,
+    "e2e_decoy_mean": -1.6640309569916516
+   },
+   "7": {
+    "seed": 7,
+    "name": "2x1.0",
+    "H": 2,
+    "span": 1.0,
+    "K": 0.24,
+    "arm": "trade",
+    "hops": [
+     {
+      "stage": 1,
+      "seeds": {
+       "build": 7,
+       "enc": 5007,
+       "rep": 9007,
+       "carrier": null,
+       "decoy_base": 400000
+      },
+      "repeater_in": null,
+      "r2_cum": 0.9999253094915171,
+      "r2_hop": 0.9999253094915171,
+      "esp": {
+       "d_slow": 1.8551981422354043e-06,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.2564725114586821,
+      "rms_in": null,
+      "rms_target": null,
+      "scale": null
+     },
+     {
+      "stage": 2,
+      "seeds": {
+       "build": 107,
+       "enc": 5107,
+       "rep": 9107,
+       "carrier": 2007,
+       "decoy_base": 420000
+      },
+      "repeater_in": {
+       "msg_band": [
+        0.2,
+        0.9
+       ],
+       "filter": "zero-phase brick-wall rFFT band-pass",
+       "rms_in": 0.14847062453887538,
+       "rms_target": 0.14940915898241836,
+       "scale": 1.0063213477174888,
+       "mean_out": -1.3877787807814458e-18,
+       "rms_out": 0.14940915898241833,
+       "oob_residual_frac": 1.0222826228565565e-31,
+       "dc": 0.5682528182669716,
+       "clip_frac": 0.0
+      },
+      "r2_cum": 0.9761048177352215,
+      "r2_hop": 0.9999141727681136,
+      "esp": {
+       "d_slow": 8.342135328989312e-07,
+       "ok_slow": true
+      },
+      "decoy_p95": -0.3607560078728364,
+      "rms_in": 0.14847062453887538,
+      "rms_target": 0.14940915898241836,
+      "scale": 1.0063213477174888
+     }
+    ],
+    "r2_cum": [
+     0.9999253094915171,
+     0.9761048177352215
+    ],
+    "e2e": 0.9761048177352215,
+    "esp_all_stages": true,
+    "e2e_decoy_p95": -0.20015693847490254,
+    "e2e_decoy_mean": -0.8387110482250366
+   }
+  }
+ },
+ "run_hashes": {
+  "code": "9785a5513dfd",
+  "spec": "f8445bdba331"
+ },
+ "reread": "re-decided from unchanged recs; no GPU; delta re-evaluated (not stored); no measured number changed"
+}
