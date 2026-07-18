@@ -1,0 +1,86 @@
+{
+ "gate": "relay-gateL",
+ "stage": "1-cpu-sandbox",
+ "all_pass": true,
+ "framing": "Gate-L: coherent zero-mean linear injection (u = a*(s - mean), corr(u,s) = 1) vs the committed Gate-3 AM subtrahend -- do first-order slow-tertile coordinates carry the message when linear content is supplied directly? Stage-A, K=0.24, span 1.5, per band. STOP-and-report.",
+ "checks": {
+  "check1_injection": {
+   "pass": true
+  },
+  "check2_reachability": {
+   "pass": true
+  },
+  "check3_ladder": {
+   "pass": true,
+   "raw_ratio": 1.001056325144009,
+   "ptrack_ratio": 138.8622091729383
+  },
+  "check4_collision": {
+   "pass": true,
+   "collision": {
+    "fresh_bases": {
+     "GATEL:SUB": 600000,
+     "GATEL:RES": 620000,
+     "GATEL:SUPRA": 640000
+    },
+    "family_span": 1859,
+    "n_committed_families": 23,
+    "min_fresh_base": 600000,
+    "max_committed_footprint": 561859,
+    "pairwise_overlaps": [],
+    "clear_of_committed": true
+   }
+  },
+  "check5_classifier": {
+   "pass": true
+  },
+  "check6_subtrahend": {
+   "pass": true
+  },
+  "check7_locked_numbers": {
+   "pass": true
+  },
+  "check8_nm_seal": {
+   "pass": true
+  },
+  "check9_no_truncation": {
+   "pass": true
+  },
+  "check10_evaluate_at_use": {
+   "pass": true
+  },
+  "check11_loso_integrity": {
+   "pass": true
+  }
+ },
+ "collision": {
+  "fresh_bases": {
+   "GATEL:SUB": 600000,
+   "GATEL:RES": 620000,
+   "GATEL:SUPRA": 640000
+  },
+  "family_span": 1859,
+  "n_committed_families": 23,
+  "min_fresh_base": 600000,
+  "max_committed_footprint": 561859,
+  "pairwise_overlaps": [],
+  "clear_of_committed": true
+ },
+ "dc_fractions": {
+  "SUB": 0.9115850655927862,
+  "RES": 0.936859326126422,
+  "SUPRA": 0.9347880030299685
+ },
+ "env": {
+  "jax": "0.10.1",
+  "jaxlib": "0.10.1",
+  "backend": "cpu",
+  "device": "cpu:cpu",
+  "interpreter": "/mnt/c/Users/Jason/Desktop/Eridos/Oscillator_Reservoir_Program/.venv/bin/python",
+  "python": "3.12.3",
+  "jax_enable_x64": true,
+  "JAX_PLATFORMS": "cpu",
+  "CUDA_VISIBLE_DEVICES": ""
+ },
+ "reachability_note": "P4 lag-set/window bound to committed am_window `delays` + eval window; corr audit built fresh -- Gate-3 has no committed corr-audit function (prose only). Disclosed for ratification before smoke."
+}
