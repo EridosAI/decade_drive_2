@@ -1,0 +1,116 @@
+{
+ "pass": true,
+ "checks": {
+  "check1_lookup_replay": {
+   "pass": true,
+   "landscape_sha_ok": true,
+   "n_mismatch_clean": 0,
+   "n_mismatch_perturbed": 1
+  },
+  "check2_collision": {
+   "pass": true,
+   "n_committed": 26,
+   "clear": true,
+   "n_overlap_injected": 1
+  },
+  "check3_verdict_engine": {
+   "pass": true
+  },
+  "check4_anchor_gate": {
+   "pass": true
+  },
+  "check5_decoy_gate": {
+   "pass": true,
+   "bar": 0.2
+  },
+  "check6_thin_gate": {
+   "pass": true
+  },
+  "check7_nm_seal_notrunc": {
+   "pass": true
+  },
+  "check8_locked_numbers": {
+   "pass": true
+  },
+  "check9_evaluate_at_use": {
+   "pass": true
+  },
+  "check10_krule_consistency": {
+   "pass": true
+  }
+ },
+ "order": [
+  "check1_lookup_replay",
+  "check2_collision",
+  "check3_verdict_engine",
+  "check4_anchor_gate",
+  "check5_decoy_gate",
+  "check6_thin_gate",
+  "check7_nm_seal_notrunc",
+  "check8_locked_numbers",
+  "check9_evaluate_at_use",
+  "check10_krule_consistency"
+ ],
+ "wall_estimate": {
+  "estimate_s": 11648.4,
+  "estimate_min": 194.1,
+  "per_span": {
+   "1.0": {
+    "L": 1520,
+    "s_per_seed": 11.9,
+    "s_all_seeds": 118.6
+   },
+   "1.5": {
+    "L": 4332,
+    "s_per_seed": 33.8,
+    "s_all_seeds": 338.0
+   },
+   "2.0": {
+    "L": 13220,
+    "s_per_seed": 103.1,
+    "s_all_seeds": 1031.5
+   },
+   "3.0": {
+    "L": 130220,
+    "s_per_seed": 1016.0,
+    "s_all_seeds": 10160.3
+   }
+  },
+  "seeds": 10,
+  "model": "time ~ nK*L(span); calib 5K@1.5=13s (Gate-4 per-stage); ADVISORY only; span-3 dominated; excludes compile/warmup"
+ },
+ "collision": {
+  "fresh_bases": {
+   "G4B:1.0": 700000,
+   "G4B:1.5": 720000,
+   "G4B:2.0": 740000,
+   "G4B:3.0": 760000
+  },
+  "family_span": 1859,
+  "n_committed_families": 26,
+  "min_fresh_base": 700000,
+  "max_committed_footprint": 641859,
+  "pairwise_overlaps_involving_fresh": [],
+  "clear_of_committed": true
+ },
+ "fresh_decoy_bases": {
+  "1.0": 700000,
+  "1.5": 720000,
+  "2.0": 740000,
+  "3.0": 760000
+ },
+ "env": {
+  "python": "3.12.3",
+  "numpy": "2.4.6",
+  "jax": "0.10.1",
+  "jax_enable_x64": true,
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "JAX_PLATFORMS": "cpu",
+  "CUDA_VISIBLE_DEVICES": ""
+ },
+ "hashes": {
+  "code": "ecdd24154fab",
+  "spec": "09f63de5249f"
+ },
+ "note": "Stage-1 CPU sandbox; each check stores its comparison payload (fire-evidence)."
+}

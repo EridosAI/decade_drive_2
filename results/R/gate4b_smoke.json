@@ -1,0 +1,61 @@
+{
+ "seed": 0,
+ "anchor_all_digit6_ok": true,
+ "rows": [
+  {
+   "span": 1.0,
+   "anchor_got": 0.9999322655081512,
+   "anchor_ref": 0.9999322655081512,
+   "digit6_ok": true,
+   "bit_exact": true,
+   "ext_K": 0.28,
+   "ext_r2_d0": 0.9999879184964559,
+   "ext_decoy_p95": -0.37773859265977866
+  },
+  {
+   "span": 1.5,
+   "anchor_got": 0.9814697252519144,
+   "anchor_ref": 0.9814697252519144,
+   "digit6_ok": true,
+   "bit_exact": true,
+   "ext_K": 0.28,
+   "ext_r2_d0": 0.9903044543303916,
+   "ext_decoy_p95": -0.08098184415105728
+  },
+  {
+   "span": 2.0,
+   "anchor_got": 0.768837038764002,
+   "anchor_ref": 0.768837038764002,
+   "digit6_ok": true,
+   "bit_exact": true,
+   "ext_K": 0.28,
+   "ext_r2_d0": 0.8197998546282935,
+   "ext_decoy_p95": -0.02275437836890027
+  },
+  {
+   "span": 3.0,
+   "anchor_got": 0.00072446334584364,
+   "anchor_ref": 0.00072446334584364,
+   "digit6_ok": true,
+   "bit_exact": true,
+   "ext_K": 0.28,
+   "ext_r2_d0": 0.000366587793401596,
+   "ext_decoy_p95": 0.04319265212772008
+  }
+ ],
+ "lookup_replay_ok": true,
+ "collision_clear": true,
+ "env": {
+  "python": "3.12.3",
+  "numpy": "2.4.6",
+  "jax": "0.10.1",
+  "jax_enable_x64": true,
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "JAX_PLATFORMS": "<default>",
+  "CUDA_VISIBLE_DEVICES": "<unset>"
+ },
+ "hashes": {
+  "code": "90fec45ae892",
+  "spec": "09f63de5249f"
+ }
+}
