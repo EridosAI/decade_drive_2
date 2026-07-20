@@ -1,0 +1,857 @@
+{
+ "G0": {
+  "_provenance_note": "commit 8361553 (subject 'PASS') contains BOTH gate0_relay.json (FIRST pose: NO-MEASUREMENT -- bandwidth-violation control did NOT collapse, instrument underpowered) AND gate0_relay_reposed.json (RE-POSED violation control COLLAPSED soundly -> PASS). The PASS verdict of record lives in the reposed file; verdict-row numbers (relay e2e, direct) are bit-identical between the two poses (verified: 0.9263803673587214 == 0.9263803673587214).",
+  "verdict_pass": {
+   "value": "**PASS (horizon is architectural): relay e2e beats the fresh direct span-3.0 baseline AND the e2e decoy floor by > seed sigma on the ESP-honest paired intersection**",
+   "source_path": "results/R/gate0_relay_reposed.md",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "L8",
+   "render_dp": "str"
+  },
+  "verdict_first_pose": {
+   "value": "NO-MEASUREMENT (violation control did NOT collapse: viol=0.664 vs compliant=0.926 -- envelope-of-envelope bookkeeping wrong or check underpowered)",
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.verdict",
+   "render_dp": "str"
+  },
+  "relay_e2e_mean": {
+   "value": 0.9263803673587214,
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.summaries.relay_e2e.mean",
+   "render_dp": 4
+  },
+  "relay_e2e_se": {
+   "value": 0.02331640791035909,
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.summaries.relay_e2e.se",
+   "render_dp": 4
+  },
+  "direct_mean": {
+   "value": -0.001713587874739107,
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.summaries.direct.mean",
+   "render_dp": 4
+  },
+  "direct_se": {
+   "value": 0.006440851685198197,
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.summaries.direct.se",
+   "render_dp": 4
+  },
+  "paired_delta_e2e_minus_direct": {
+   "value": 0.9280939552334605,
+   "source_path": "results/R/gate0_relay.json",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd",
+   "source_field_or_line": "verdict.deltas.e2e_minus_direct.mean",
+   "render_dp": 4
+  }
+ },
+ "G1": {
+  "classification": {
+   "value": "A",
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.loss_law.classification",
+   "render_dp": "str"
+  },
+  "verdict_line": {
+   "value": "**A -- BUDGET-LIKE (pre-registered; TWO-REGIME, NOT a clean constant-per-hop cost): the registered linear rho_k slope is flat (-0.0002 +/- 0.0055, |slope| <= max(2*SE,0.01)=0.0109; floor INERT since 2*SE binds). Ladder PRICED -- B/depth-limit REFUTED: per-hop r2_hop is flat with depth (slope t=-1.02, no error amplification). SHAPE: a one-time first-relay INSERTION loss rho_2=0.941 (largest single drop) + a near-flat STEADY-STATE mean rho_3..5~0.960 carrying a mild late drift (slope -0.0148, t=-4.06, 7/8 seeds neg) that is UNRESOLVED at n=8/H=5 (lives mostly in the last hop). H_half=16.0 (from the OVERALL budget rho 0.956, insertion loss included) is an EXTRAPOLATION (3.2x beyond measured H=5, off a U-shaped rho) -- not a measured horizon.**",
+   "source_path": "results/R/gate1_multihop.md",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "L11",
+   "render_dp": "str"
+  },
+  "loss_law_slope_mean": {
+   "value": -0.00015183978191816538,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.loss_law.slope_mean",
+   "render_dp": 4
+  },
+  "loss_law_slope_se": {
+   "value": 0.005450762731321685,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.loss_law.slope_se",
+   "render_dp": 4
+  },
+  "regime1_insertion_rho2": {
+   "value": 0.9411994007639677,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.loss_law.rho_by_level.2",
+   "render_dp": 4
+  },
+  "regime1_line": {
+   "value": "- **Regime 1 -- one-time first-relay insertion loss:** rho_2 = 0.9412 +/- 0.0210 (the LARGEST single-hop drop; hop-1 clean injection -> hop-2 first relay).",
+   "source_path": "results/R/gate1_multihop.md",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "L37",
+   "render_dp": "str"
+  },
+  "regime2_line": {
+   "value": "- **Regime 2 -- near-flat steady-state:** mean rho_3..5 = 0.9605 +/- 0.0040 (distinct from the loss-law OVERALL budget rho 0.9556, which pools in the first-relay insertion loss). Slope -0.01482 +/- 0.00366 (t=-4.06, 7 seeds neg). This mild late drift is UNRESOLVED at this depth: it lives mostly in the LAST hop (mean(rho_last - rho_3)=-0.0296 vs mean(rho_mid - rho_3)=-0.0050), so at n/H=5 a genuine steady decline is NOT separable from a single noisy last hop.",
+   "source_path": "results/R/gate1_multihop.md",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "L38",
+   "render_dp": "str"
+  }
+ },
+ "G2": {
+  "classification": {
+   "value": "B",
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.loss_law.classification",
+   "render_dp": "str"
+  },
+  "verdict_line": {
+   "value": "**B2 -- STEADY DECLINE (pre-registered): the m0-referenced steady-state ratio rho_k (k=3..10) FALLS with depth, slope -0.0135 +/- 0.0015 < -max(2*SE,0.01)=-0.0100 (t=-8.85 vs zero; the margin -0.0035 is measured vs the 0.01 min-effect FLOOR, not a noise scale, so the DIRECTION is decisive). The Gate-1 late drift is REAL at depth. MECHANISM -- this is an END-TO-END, m0-referenced decline (systematic drift away from the source), NOT per-hop error amplification: per-hop reconstruction r2_hop (each stage vs its OWN immediate input) is depth-flat (slope t=1.50 over hops 2..10, n.s.), so per-stage compounding is refuted while the m0-referenced decline stands -- r2_hop scores a drifted moving target and is blind to the m0 loss. MAGNITUDE modest, horizon EXTRAPOLATED: rho_ss=0.9277, rho falls 0.970->0.872 over hops 3->10; measured r2_cum(H=10)=0.5069 +/- 0.0284 has NOT crossed the 0.5 half-power point; H_half=11.0 is a one-hop trend-extrapolation, so 'bounded' is inferred by trend continuation, not observed. Insertion loss rho_2=0.937 (one-time, excluded).**",
+   "source_path": "results/R/gate2_depth.md",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "L11",
+   "render_dp": "str"
+  },
+  "depth_slope_mean": {
+   "value": -0.013502105845325121,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.loss_law.slope_mean",
+   "render_dp": 4
+  },
+  "depth_slope_se": {
+   "value": 0.001525274098148739,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.loss_law.slope_se",
+   "render_dp": 4
+  },
+  "depth_slope_thr": {
+   "value": 0.01,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.loss_law.slope_thr",
+   "render_dp": 2
+  },
+  "k_start": {
+   "value": 3,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.loss_law.k_start",
+   "render_dp": "int"
+  },
+  "rho_ss": {
+   "value": 0.9277237803485942,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.steady.rho_ss",
+   "render_dp": 4
+  },
+  "r2_cum_H10": {
+   "value": 0.5069240661631236,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "verdict.steady.r2_cum_H_mean",
+   "render_dp": 4
+  }
+ },
+ "G3": {
+  "verdict_line": {
+   "value": "**MECHANISM MATRIX -- SUB=SQ-carried, RES=SQ-carried, SUPRA=SQ-carried. C3 STANDS unmodified (SQ-carried across all classified bands, RES included); the broadband side-finding needs another explanation (report, no new claim). [SCOPED -- the injection supplies no linear message content; the LIN-carried branch tested only reservoir-mediated re-encoding into first-order coordinates, which did not occur. NOT an independent refutation of a linear resonant channel. See \"Degeneracy and the scope of this verdict\".]**",
+   "source_path": "results/R/gate3_mechanism.md",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "L11",
+   "render_dp": "str"
+  },
+  "FULL_r2_SUB": {
+   "value": 0.9864540115271048,
+   "source_path": "results/R/gate3_mechanism.json",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "verdict.matrix_r2.SUB.FULL",
+   "render_dp": 4
+  },
+  "FULL_r2_RES": {
+   "value": 0.8600663096799446,
+   "source_path": "results/R/gate3_mechanism.json",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "verdict.matrix_r2.RES.FULL",
+   "render_dp": 4
+  },
+  "FULL_r2_SUPRA": {
+   "value": 0.6650374447295485,
+   "source_path": "results/R/gate3_mechanism.json",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "verdict.matrix_r2.SUPRA.FULL",
+   "render_dp": 4
+  },
+  "lin_null_24of24_line": {
+   "value": "4. **Where the discrimination actually lives.** R_SQ >= 0.9 is near-automatic: SQ is a strict column-subset of FULL, so dropping Re/Im columns that carry nothing generically improves out-of-sample fit (R_SQ >= 1 in 23/24; lone exception SUB seed 5 at 0.9997 -- noise-level, far above the floor). All falsifiable content is in R_LIN < 0.5: LIN scores at or below its own never-injected decoy null in 24/24 cells (its real r2 is negative in 20/24). Read 'SQ-carried' as 'the linear observable order is insufficient AND the message is retained on |z|^2', not as an independent selection of a quadratic channel.",
+   "source_path": "results/R/gate3_mechanism.md",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "L44",
+   "render_dp": "str"
+  },
+  "u2_exact_and_corr_line": {
+   "value": "1. **Injection degeneracy.** Message injected as square-law AM, u = 0.5*sqrt(s)*w (Rademacher w) => u^2 = 0.25*s exactly (max|u^2 - 0.25*s| = 2.8e-17) and, because w is white and independent of s, the input carries no coherent linear message content at any frequency (eval-window |corr(u,s)| <= 0.032 in SUB, RES and SUPRA alike; lagged cross-correlations at the noise floor). LIN-carried therefore had no input-level pathway: it remained reachable only if the reservoir's nonlinearity re-encoded the power envelope into first-order (Re/Im) slow-tertile coordinates -- slow drifts and AM sidebands in Re/Im are linearly readable, so this door was physically live. B1 -- the only C3-modifying branch -- was reachable only through it. This gate tested that door and found it shut (LIN at or below its own never-injected decoy null, 24/24 cells); it did not arbitrate between two live input channels. The AM scheme is the ratified Gate-0 instrument and is not re-litigated here.",
+   "source_path": "results/R/gate3_mechanism.md",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "L41",
+   "render_dp": "str"
+  }
+ },
+ "GB": {
+  "M1_A": {
+   "value": 29.858463856201485,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.fits.M1.params.A",
+   "render_dp": 2
+  },
+  "M1_p": {
+   "value": 1.0428964385184396,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.fits.M1.params.p",
+   "render_dp": 4
+  },
+  "M1_A_ci2sd": {
+   "value": [
+    12.12300982342784,
+    73.54014199750988
+   ],
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.fits.M1.params_ci_2sd.A",
+   "render_dp": 2
+  },
+  "M1_p_ci2sd": {
+   "value": [
+    0.34408203112257796,
+    1.7417108459143011
+   ],
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.fits.M1.params_ci_2sd.p",
+   "render_dp": 4
+  },
+  "M1_wrmse": {
+   "value": 0.00860104001751341,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.fits.M1.wrmse",
+   "render_dp": 4
+  },
+  "one_pole_2p3_line": {
+   "value": "NOTE (interpretive, ships with EXPLAINED): the winning model is the GENERIC smooth power law (p = 1.04, 2sd [0.34, 1.74]); the mechanism-derived one-pole form (asymptotic slope 2) fits 2.3x worse and p = 2 lies outside the 2sd interval. What this stage establishes is: no cliff and no rate limit -- the best cliff the data allows is a constant (nu_x unidentified above the last point), losing 5.27x -- NOT any specific attenuation law. A single pole is also too crude a derivation here: the slow tertile spans corner frequencies across [1.00, 3.13] (166 oscillators) and the fitted window c = 0.42-4.24 brackets them, where a distributed-corner system shows intermediate effective slope between 0 and 2. The attenuation law remains OPEN; stage-2 tests the M1 power-law interpolation, not a mechanism form. The overlap stratum sits systematically ABOVE the extrapolated fit (all 5 residuals positive, +0.024 to +0.052, broadly increasing with c) -- consistent with an additional direct transfer path when the message band lies inside the injection band, still power-borne per Gate-3 (SUPRA: SQ-carried). Recorded pre-data: H2 may land high in its window. Relevant to Gate-L.",
+   "source_path": "results/R/gateB_broadband.md",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "L18",
+   "render_dp": "str"
+  },
+  "cliff_ratio_5p27": {
+   "value": 5.267298153881415,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.cliff_ratio",
+   "render_dp": 2
+  },
+  "overlap_resid": {
+   "value": [
+    {
+     "center": 5.410644803132983,
+     "resid": 0.023937604507759502
+    },
+    {
+     "center": 7.456559123087423,
+     "resid": 0.03926611883724129
+    },
+    {
+     "center": 10.27609018501888,
+     "resid": 0.03397346094143128
+    },
+    {
+     "center": 14.161763857498666,
+     "resid": 0.045298317293181345
+    },
+    {
+     "center": 16.73320053068151,
+     "resid": 0.05244624985432256
+    }
+   ],
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.overlap_report[0..4].{center,resid}",
+   "render_dp": 4
+  },
+  "overlap_c_min": {
+   "value": 5.410644803132983,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.overlap_report.0.center",
+   "render_dp": 2
+  },
+  "overlap_c_max": {
+   "value": 16.73320053068151,
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.overlap_report.4.center",
+   "render_dp": 2
+  },
+  "probe_verdict_line": {
+   "value": "PREDICTIVE PASS -- all three held-out bands land within max(2*sigma_pred, 0.05) of the locked M1 prediction. The stage-1 attenuation explanation (smooth M1 power law) is CORROBORATED out-of-sample; the Phase-3 line-67 erratum path stays open pending Gate-L.",
+   "source_path": "results/R/gateB_probe.json",
+   "source_commit": "8794fe7f337cd19c3bb53ef2b73130f545f2632c",
+   "source_field_or_line": "verdict.verdict",
+   "render_dp": "str"
+  },
+  "probe_dev_H1": {
+   "value": 0.006900205686583338,
+   "source_path": "results/R/gateB_probe.json",
+   "source_commit": "8794fe7f337cd19c3bb53ef2b73130f545f2632c",
+   "source_field_or_line": "verdict.holdouts.H1.deviation",
+   "render_dp": 4
+  },
+  "probe_dev_H2": {
+   "value": 0.020551931565488624,
+   "source_path": "results/R/gateB_probe.json",
+   "source_commit": "8794fe7f337cd19c3bb53ef2b73130f545f2632c",
+   "source_field_or_line": "verdict.holdouts.H2.deviation",
+   "render_dp": 4
+  },
+  "probe_dev_H3": {
+   "value": 0.040234742194135475,
+   "source_path": "results/R/gateB_probe.json",
+   "source_commit": "8794fe7f337cd19c3bb53ef2b73130f545f2632c",
+   "source_field_or_line": "verdict.holdouts.H3.deviation",
+   "render_dp": 4
+  },
+  "probe_devs_all_positive": {
+   "value": true,
+   "source_path": "results/R/gateB_probe.json",
+   "source_commit": "8794fe7f337cd19c3bb53ef2b73130f545f2632c",
+   "source_field_or_line": "verdict.holdouts.{H1,H2,H3}.(mean_obs>pred_r2)",
+   "render_dp": "str"
+  },
+  "overlap_residuals": {
+   "value": [
+    0.023937604507759502,
+    0.03926611883724129,
+    0.03397346094143128,
+    0.045298317293181345,
+    0.05244624985432256
+   ],
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.overlap_report[*].resid (5 entries, band order as stored)",
+   "render_dp": 4
+  },
+  "overlap_centers": {
+   "value": [
+    5.410644803132983,
+    7.456559123087423,
+    10.27609018501888,
+    14.161763857498666,
+    16.73320053068151
+   ],
+   "source_path": "results/R/gateB_broadband.json",
+   "source_commit": "c5a46e0a726ac38db053bbbfe31aa03a140956e9",
+   "source_field_or_line": "verdict.overlap_report[*].center",
+   "render_dp": 2
+  }
+ },
+ "G4": {
+  "verdict_line_with_scope": {
+   "value": "**SHORT-WINS (primary short-vs-long @ S=3.0): D = e2e(3 x 1.0) - e2e(2 x 1.5) = +0.0564 +/- 0.0200 (paired n=8); delta = max(2*SE,0.02) = 0.0401. SHORT hops win. [SCOPED: K<=0.24, AT-CEILING right-censored -- see verdict scope]**",
+   "source_path": "results/R/gate4_hoptrade.md",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "L10",
+   "render_dp": "str"
+  },
+  "D_mean": {
+   "value": 0.056372164217040444,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.contrasts.PRIMARY (short-vs-long @ S=3.0).D_mean",
+   "render_dp": 4
+  },
+  "D_se": {
+   "value": 0.020031924010530527,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.contrasts.PRIMARY (short-vs-long @ S=3.0).se_paired",
+   "render_dp": 4
+  },
+  "n_paired": {
+   "value": 8,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.contrasts.PRIMARY (short-vs-long @ S=3.0).n_paired",
+   "render_dp": "int"
+  },
+  "delta": {
+   "value": 0.040063848021061055,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.contrasts.PRIMARY (short-vs-long @ S=3.0).classification.delta",
+   "render_dp": 4
+  },
+  "insertion_rho2_long_2x1p5": {
+   "value": 0.9411994007639677,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.decomposition.2x1.5.insertion_rho2.mean",
+   "render_dp": 4
+  },
+  "insertion_rho2_short_3x1p0": {
+   "value": 0.9848323295694211,
+   "source_path": "results/R/gate4_hoptrade.json",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "verdict.decomposition.3x1.0.insertion_rho2.mean",
+   "render_dp": 4
+  },
+  "decomposition_split_line": {
+   "value": "[SCOPED: K<=0.24, AT-CEILING right-censored.] K*(s)=0.24 at every span, but the routing curves are UNEQUALLY converged there: span-1.0 (short arm) is SATURATED (r2_d0=0.99995, 5.4e-05 from the hard r2=1 ceiling, K0.16->0.24 gain +0.0022, slope 0.028/K) while span-1.5 (long arm) is only near-saturated (r2_d0=0.98607, gain +0.0438, slope 0.55/K) and span-2.0 still climbs steeply (r2_d0=0.74476, gain +0.1361, slope 1.70/K) -- a ~20x-60x gradient asymmetry. A shared ceiling under-tunes LONGER hops more, so the primary D is an AT-CEILING UPPER estimate expected to COMPRESS for K>0.24. The SHORT-WINS SIGN is robust: (i) the long arm sits within 1.4% of routing saturation, so the censored differential headroom (~0.014/hop) is far below the e2e gap, which is dominated by STRUCTURAL per-hop loss (routing->e2e loss 0.0577 for the long arm's 2 hops vs 0.0152 for the short arm's 3 at near-equal routing), not coupling suboptimality; (ii) WITHIN K<=0.24 the short-minus-long routing gap SHRINKS monotonically as K rises (+0.1574@K0.08 -> +0.0139@K0.24), so K=0.24 is already the LEAST-favorable in-range coupling for SHORT and it still wins by the full D with all seeds positive. What the right-censored grid CANNOT certify above the ceiling: the MAGNITUDE, that the primary stays FULL-STRENGTH, and (by pure e2e-headroom arithmetic, long headroom > D) that a LONG-WINS reversal is impossible -- a reversal is mechanistically implausible but NOT formally excluded. The SECONDARY (S=2.0) contrast is more censoring-exposed (long arm far below saturation) so it is NOT ceiling-stable; it is consistency-only and non-gating. Behavior above K=0.24 is out of scope for this gate.",
+   "source_path": "results/R/gate4_hoptrade.md",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "L56",
+   "render_dp": "str"
+  },
+  "loso_line": {
+   "value": "- **SHORT-WINS survives 8/8 single-seed drops** (ALL kept-means clear their max(2*SE,0.02) delta; all deltas 2*SE-governed). Removing the largest-|D| seed 4 (the fat tail) STRENGTHENS the verdict (sd 0.0567 -> 0.0291: the fat tail is the variance source, not the load-bearing seed). The TIGHTEST drop is seed 1 (survival margin +0.0062).",
+   "source_path": "results/R/gate4_hoptrade.md",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "L46",
+   "render_dp": "str"
+  },
+  "scope_architecture_conditional_line": {
+   "value": "[ARCHITECTURE-CONDITIONAL.] This trade prices the relay AS BUILT: an OFFLINE DECODE-AND-FORWARD chain in which each hop ridge-decodes the |z|^2 channel (Gate-3-pinned) to the message estimate and RE-MODULATES it into a fresh span-s network, with the per-hop insertion cost from Gate-1's re-injection plateau (insertion rho_2 ~ 0.985 span-1.0, ~0.941 span-1.5, from the committed decomposition). Compound span S=H*s is INFORMATION-PATH accounting (H successive square-law demodulations end-to-end), NOT one physical spectrum. The short-hop advantage is a property of THIS scheme's economics and does NOT generalize to repeaters in general: amplify-and-forward, coherent/analog relaying, soft-information forwarding, joint multi-hop decoding, or any change to the decoder or per-hop insertion cost could reweight or invert the trade.",
+   "source_path": "results/R/gate4_hoptrade.md",
+   "source_commit": "39560d886f4ba4c1ed70b4dc81e180bf9ee70463",
+   "source_field_or_line": "L60",
+   "render_dp": "str"
+  }
+ },
+ "GL": {
+  "verdict_line": {
+   "value": "**COHERENT-LIN-LIVE (SUB, RES, SUPRA LIN-LIVE): SUB=LIN-LIVE; RES=LIN-LIVE; SUPRA=LIN-LIVE**",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L10",
+   "render_dp": "str"
+  },
+  "D_LIN_SUB_mean": {
+   "value": 1.055755032830848,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.D_mean",
+   "render_dp": 4
+  },
+  "D_LIN_SUB_se": {
+   "value": 0.054802011041780285,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.se_paired",
+   "render_dp": 4
+  },
+  "D_LIN_SUB_delta": {
+   "value": 0.10960402208356057,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.delta",
+   "render_dp": 4
+  },
+  "D_LIN_RES_mean": {
+   "value": 1.0425950657923018,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.RES.D_mean",
+   "render_dp": 4
+  },
+  "D_LIN_RES_se": {
+   "value": 0.015479558270406795,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.RES.se_paired",
+   "render_dp": 4
+  },
+  "D_LIN_RES_delta": {
+   "value": 0.03095911654081359,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.RES.delta",
+   "render_dp": 4
+  },
+  "D_LIN_SUPRA_mean": {
+   "value": 1.0209890328775482,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUPRA.D_mean",
+   "render_dp": 4
+  },
+  "D_LIN_SUPRA_se": {
+   "value": 0.005600646068972479,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUPRA.se_paired",
+   "render_dp": 4
+  },
+  "D_LIN_SUPRA_delta": {
+   "value": 0.02,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUPRA.delta",
+   "render_dp": 4
+  },
+  "coherent_r2_SUB": {
+   "value": 0.9999999999958442,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.coh_mean",
+   "render_dp": 4
+  },
+  "coherent_r2_RES": {
+   "value": 0.9999999999633797,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.RES.coh_mean",
+   "render_dp": 4
+  },
+  "coherent_r2_SUPRA": {
+   "value": 0.9999999998665143,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUPRA.coh_mean",
+   "render_dp": 4
+  },
+  "decoy_floor_max_p95": {
+   "value": 0.1764299147771877,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.decoys.max_p95",
+   "render_dp": 4
+  },
+  "decoy_floor_max_cell": {
+   "value": "SUB|2|LIN",
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.decoys.max_cell",
+   "render_dp": "str"
+  },
+  "decoy_floor_bar": {
+   "value": 0.2,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.decoys.bar",
+   "render_dp": 2
+  },
+  "per_seed_D_positive_count": {
+   "value": {
+    "positive": 24,
+    "total": 24
+   },
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.{SUB,RES,SUPRA}.per_seed_D (count>0)",
+   "render_dp": "str"
+  },
+  "per_seed_signs_SUB": {
+   "value": "- SUB: 0:+ 1:+ 2:+ 3:+ 4:+ 5:+ 6:+ 7:+",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L46",
+   "render_dp": "str"
+  },
+  "per_seed_signs_RES": {
+   "value": "- RES: 0:+ 1:+ 2:+ 3:+ 4:+ 5:+ 6:+ 7:+",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L47",
+   "render_dp": "str"
+  },
+  "per_seed_signs_SUPRA": {
+   "value": "- SUPRA: 0:+ 1:+ 2:+ 3:+ 4:+ 5:+ 6:+ 7:+",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L48",
+   "render_dp": "str"
+  },
+  "loso_tightest_SUB": {
+   "value": {
+    "seed": 0,
+    "margin": 0.9347541593871601
+   },
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.loso.{tightest_seed,tightest_margin}",
+   "render_dp": 4
+  },
+  "loso_tightest_RES": {
+   "value": {
+    "seed": 4,
+    "margin": 1.0048394945625374
+   },
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.RES.loso.{tightest_seed,tightest_margin}",
+   "render_dp": 4
+  },
+  "loso_tightest_SUPRA": {
+   "value": {
+    "seed": 2,
+    "margin": 0.9980004066183705
+   },
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUPRA.loso.{tightest_seed,tightest_margin}",
+   "render_dp": 4
+  },
+  "sq_full_fence_line": {
+   "value": "Why the Gate-3 classifier does NOT port: with z = Z0 + dz, |z|^2 = |Z0|^2 + 2*Re(conj(Z0)*dz) + |dz|^2; under coherent injection dz is first-order in the drive, so the beat term makes |z|^2 carry LINEAR-in-drive content. A high SQ r2 here is NOT a quadratic-mechanism signature. FENCED PRE-DATA: no mechanism claim / retention ratio / channel classification is derived from the SQ or FULL columns (computed + recorded for continuity only). All falsifiable content lives in the LIN column (Re z, Im z are first-order observables under any injection).",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L14",
+   "render_dp": "str"
+  },
+  "p_slow_gap_line": {
+   "value": "GAP (accepted 2026-07-18, no backfill): the P_slow ladder analog (slow-tertile drive-tracking projection; spec report-only context for the verdict prose) was NOT recorded at the battery -- trajectories are not stored, so it cannot be derived post hoc. Accepted gap; does not affect the verdict or any gated instrument.",
+   "source_path": "results/R/gateL_coherent.md",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "L24",
+   "render_dp": "str"
+  },
+  "loso_tightest_margin": {
+   "value": 0.9347541593871601,
+   "source_path": "results/R/gateL_coherent.json",
+   "source_commit": "c11ff5e48d83915a25b0276aa2544d397d58d10d",
+   "source_field_or_line": "verdict.bands.SUB.loso.tightest_margin (tightest across bands; seed 0)",
+   "render_dp": 4
+  }
+ },
+ "E1": {
+  "status": {
+   "value": "FILED 2026-07-19 -- decade_drive commit db5fec6c14a6ef8b89b0e286c36bf96997ea4e85 (Docs/ERRATA.md, amend-not-overwrite; lines 67/207 quoted byte-exact; correcting record decade_drive_2 c11ff5e)",
+   "source_path": "Docs/ERRATA.md (decade_drive)",
+   "source_commit": "db5fec6c14a6ef8b89b0e286c36bf96997ea4e85",
+   "source_field_or_line": "whole file (104 lines)",
+   "render_dp": "str"
+  },
+  "pointer_commit": {
+   "value": "cf053a9dea7d61efbed4cd682da9c7d0ec153a41",
+   "source_path": "decade_drive master",
+   "source_commit": "cf053a9dea7d61efbed4cd682da9c7d0ec153a41",
+   "source_field_or_line": "git rev-parse cf053a9 (decade_drive)",
+   "render_dp": "str"
+  },
+  "pointer_line_text": {
+   "value": "ERRATUM: see Docs/ERRATA.md E1 -- the envelope-timescale constraint at lines 67/207 (0495842 numbering) is corrected",
+   "source_path": "Docs/decade_drive_phase3_hardware_mapping.md",
+   "source_commit": "cf053a9dea7d61efbed4cd682da9c7d0ec153a41",
+   "source_field_or_line": "Docs/decade_drive_phase3_hardware_mapping.md L9 (verbatim)",
+   "render_dp": "str"
+  }
+ },
+ "G4b": {
+  "K_hat_span_1.0": {
+   "value": 0.48,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.1.0.K_hat",
+   "render_dp": "grid"
+  },
+  "class_span_1.0": {
+   "value": "STILL-CENSORED",
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.1.0.class",
+   "render_dp": "str"
+  },
+  "K_hat_span_1.5": {
+   "value": 0.48,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.1.5.K_hat",
+   "render_dp": "grid"
+  },
+  "class_span_1.5": {
+   "value": "STILL-CENSORED",
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.1.5.class",
+   "render_dp": "str"
+  },
+  "K_hat_span_2.0": {
+   "value": 0.48,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.2.0.K_hat",
+   "render_dp": "grid"
+  },
+  "class_span_2.0": {
+   "value": "STILL-CENSORED",
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.2.0.class",
+   "render_dp": "str"
+  },
+  "K_hat_span_3.0": {
+   "value": 0.32,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.3.0.K_hat",
+   "render_dp": "grid"
+  },
+  "class_span_3.0": {
+   "value": "NOISE-ARGMAX-UNSTABLE-ARGMAX",
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.3.0.class",
+   "render_dp": "str"
+  },
+  "span2_mean_K024": {
+   "value": 0.7447639185592246,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.2.0.table.0.24",
+   "render_dp": 4
+  },
+  "span2_mean_K048": {
+   "value": 0.9313265739630683,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.2.0.table.0.48",
+   "render_dp": 4
+  },
+  "span2_edge_margin": {
+   "value": 0.039459842004442525,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "verdict.per_span.2.0.margins.left_margin",
+   "render_dp": 4
+  },
+  "esp_fail_count": {
+   "value": 4,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "recs[*].ok_slow==false count",
+   "render_dp": "int"
+  },
+  "esp_fail_cells": {
+   "value": [
+    "3.0|0.28|7",
+    "3.0|0.28|8",
+    "3.0|0.32|7",
+    "3.0|0.32|8"
+   ],
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "recs keys with ok_slow==false",
+   "render_dp": "list"
+  },
+  "esp_recovery_K": {
+   "value": 0.4,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "recs 3.0|0.4|7,8 + 3.0|0.48|7,8 ok_slow==true (min recovering K)",
+   "render_dp": "grid"
+  },
+  "anchor_ok": {
+   "value": true,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "anchor.ok",
+   "render_dp": "bool"
+  },
+  "anchor_digit_40_40": {
+   "value": true,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "anchor.per_span.*.digit_ok (all)",
+   "render_dp": "bool"
+  },
+  "anchor_bit_40_40": {
+   "value": 40,
+   "source_path": "results/R/gate4b_kextension.json",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "anchor.per_span.*.bit_cells (sum; total 40)",
+   "render_dp": "int"
+  },
+  "landed_commit": {
+   "value": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_path": "decade_drive_2 master",
+   "source_commit": "e14ae6ada4af0ea3c0e2b08f8cde3dffd942cb08",
+   "source_field_or_line": "git rev-parse e14ae6a",
+   "render_dp": "str"
+  }
+ },
+ "CONFIG": {
+  "K_primary": {
+   "value": 0.24,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "K",
+   "render_dp": 2
+  },
+  "anchor_target": {
+   "value": 0.986,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.anchor.target",
+   "render_dp": 3
+  },
+  "n_seeds": {
+   "value": 8,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "verdict.n_intersection",
+   "render_dp": "int"
+  },
+  "G1_H": {
+   "value": 5,
+   "source_path": "results/R/gate1_multihop.json",
+   "source_commit": "7d6f3f2784f3e0154c1c7b1b7e5229391d475789",
+   "source_field_or_line": "H",
+   "render_dp": "int"
+  },
+  "G2_H": {
+   "value": 10,
+   "source_path": "results/R/gate2_depth.json",
+   "source_commit": "b49834f1973f08a358fa8b42d58a92fa8ba99eb0",
+   "source_field_or_line": "H",
+   "render_dp": "int"
+  },
+  "G3_span": {
+   "value": 1.5,
+   "source_path": "results/R/gate3_mechanism.json",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "span",
+   "render_dp": 1
+  },
+  "esp_intersection_by_gate": {
+   "value": {
+    "G0": 7,
+    "G1": 8,
+    "G2": 7,
+    "G3": 8,
+    "G4": 8,
+    "GL": 8
+   },
+   "source_path": "gate0_relay_reposed.json / gate2_depth.json / gate1,3,4,L verdicts",
+   "source_commit": "8361553cd99bd9085ada92c1ab68aee7062b55dd (G0), b49834f1973f08a358fa8b42d58a92fa8ba99eb0 (G2); n=8 gates per their committed verdict blocks",
+   "source_field_or_line": "verdict.n_intersection (G0, G2)",
+   "render_dp": "int"
+  },
+  "_note": " CORRECTED 2026-07-20: program-wide n=8 claim replaced by per-gate truth (G0/G2 n=7).",
+  "anchor_mean_seeds0_7": {
+   "value": 0.9864540115271048,
+   "source_path": "results/R/gate3_mechanism.json",
+   "source_commit": "d1a71167a91a5bc771aeedd1648cc88cac3a20c7",
+   "source_field_or_line": "verdict.matrix_r2.SUB.FULL (== Phase-1 anchor mean, seeds 0-7)",
+   "render_dp": 6
+  }
+ }
+}
